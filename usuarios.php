@@ -11,7 +11,7 @@
 
 <body>
 
-   
+        <?php readfile('./menu.html'); ?>
 
     <div class="container mt-4">
         <div class="card">
@@ -28,7 +28,7 @@
                             <th style="width: 15%;" scope="col">Perfil</th>
                             <th style="width: 15%;" scope="col">Estatus</th>
                             <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="productos_formulario.html"><i
+                                <a class="btn btn-outline-primary" href="productos_formulario.php"><i
                                         class="fa fa-plus"></i></a>
                             </th>
                         </tr>
