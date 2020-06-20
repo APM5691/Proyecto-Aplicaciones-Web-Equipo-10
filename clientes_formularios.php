@@ -17,11 +17,11 @@
         Formulario Para Clientes
       </div>
       <div class="card-body">
-        <form action="marcas_guardar.php" method="post">
+        <form action="Nombre_guardar.php" method="post">
           <div class="form-group">
-            <label for="marca">Nombre</label>
-            <input type="text" class="form-control form-control-sm" id="marca" name="marca"
-              aria-describedby="marca_help" />
+            <label for="Nombre">Nombre</label>
+            <input type="text" class="form-control form-control-sm" id="Nombre" name="Nombre"
+              aria-describedby="Nombre_help" />
             <small id="marca_help" class="form-text text-muted">Escribe tu nombre</small>
           </div>
           
@@ -63,23 +63,23 @@
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Password</label>
-            <input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" />
+            <input type="password" class="form-control form-control-sm" aria-describedby="password" />
             <small id="emailHelp" class="form-text text-muted">Escribe tu Password</small>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Primer Apellido</label>
-            <input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" />
+            <input type="text" class="form-control form-control-sm" aria-describedby="text" />
             <small id="emailHelp" class="form-text text-muted">Escribe tu primer Apellido</small>
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">Primer Segundo</label>
-            <input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" />
+            <input type="text" class="form-control form-control-sm" aria-describedby="text" />
             <small id="emailHelp" class="form-text text-muted">Escribe tu segundo nombre si tienes</small>
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Telefono</label>
-            <input type="email" class="form-control form-control-sm" aria-describedby="emailHelp" />
+            <input type="text" class="form-control form-control-sm" aria-describedby="text" />
             <small id="emailHelp" class="form-text text-muted">Telefono</small>
           </div>
           <div class="form-group">
