@@ -24,19 +24,7 @@
               aria-describedby="marca_help" />
             <small id="marca_help" class="form-text text-muted">Escribe tu nombre</small>
           </div>
-          <div class="form-group">
-            <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sexo
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="#">Hombre</a>
-                <a class="dropdown-item" href="#">Mujer</a>
-                <a class="dropdown-item" href="#">Indefinido</a>
-              </div>
-            </div>
-          </div>
+          
           <div class="form-group">
             <label for="perfil">¿Que eres?</label><br />
             <div class="form-check form-check-inline">
@@ -51,38 +39,21 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="Dias-trabaja">Dias que trabaja</label><br />
+            <label for="Sexo">Sexo</label><br />
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-              <label class="form-check-label" for="inlineCheckbox1">lunes</label>
+              <input class="form-check-input" type="radio" name="Sexo" id="Hombre"
+                value="option1" />
+              <label class="form-check-label" for="Sexo">Hombre</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-              <label class="form-check-label" for="inlineCheckbox2">Martes</label>
+              <input class="form-check-input" type="radio" name="Sexo" id="Mujer"
+                value="option2" />
+              <label class="form-check-label" for="Sexo">Mujer</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-              <label class="form-check-label" for="inlineCheckbox1">Miercoles</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-              <label class="form-check-label" for="inlineCheckbox2">Jueves</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-              <label class="form-check-label" for="inlineCheckbox1">Viernes</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" />
-              <label class="form-check-label" for="inlineCheckbox2">Sabado</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-              <label class="form-check-label" for="inlineCheckbox1">Domingo</label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" />
-              <label class="form-check-label" for="inlineCheckbox1">No Aplica</label>
+              <input class="form-check-input" type="radio" name="Sexo" id="Indeterminado"
+                value="option2" />
+              <label class="form-check-label" for="Sexo">Indeterminado</label>
             </div>
           </div>
           <div class="form-group">
