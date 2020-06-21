@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Marcas</title>
+    <title>Materiales</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
 </head>
@@ -21,9 +21,9 @@
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width: 90%;" scope="col">Marca</th>
+                            <th style="width: 90%;" scope="col">Material</th>
                             <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="marcas_formulario.html"><i
+                                <a class="btn btn-outline-primary" href="material_formulario.html"><i
                                         class="fa fa-plus"></i></a>
                             </th>
                         </tr>
