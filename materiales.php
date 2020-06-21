@@ -23,7 +23,7 @@
                         <tr>
                             <th style="width: 90%;" scope="col">Material</th>
                             <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="material_formulario.html"><i
+                                <a class="btn btn-outline-primary" href="materiales_formulario.html"><i
                                         class="fa fa-plus"></i></a>
                             </th>
                         </tr>
