@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventas formulario</title>
+    <title>Detalle de venta formulario</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
@@ -14,7 +14,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                Formulario Para Ventas
+                Formulario Para Detalle de Ventas
             </div>
             <div class="card-body">
                 <form action="marcas_guardar.php" method="post">
