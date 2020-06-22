@@ -33,10 +33,10 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="marca">Nombre</label>
-                        <input type="text" class="form-control form-control-sm" id="marca" name="marca"
+                        <label for="usuario">Nombre</label>
+                        <input type="text" class="form-control form-control-sm" id="usuario" name="usuario"
                             aria-describedby="marca_help">
-                        <small id="marca_help" class="form-text text-muted">Escribe el nombre del producto</small>
+                        <small id="usuario_help" class="form-text text-muted">Escribe el nombre del producto</small>
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Example textarea</label>

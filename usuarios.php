@@ -17,7 +17,7 @@
         <div class="card">
             <div class="card-header">
                 Usuarios
-                <a href="clientes_formulario.html"class="btn btn-success float-right">Agregar</a>
+                <a href="usuarios_formulario.php"class="btn btn-success float-right">Agregar</a>
             </div>
             <div class="card-body">
                 <table class="table table-dark table table-hover">
@@ -28,7 +28,7 @@
                             <th style="width: 15%;" scope="col">Perfil</th>
                             <th style="width: 15%;" scope="col">Estatus</th>
                             <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="productos_formulario.php"><i
+                                <a class="btn btn-outline-primary" href="usuarios_formulario.php"><i
                                         class="fa fa-plus"></i></a>
                             </th>
                         </tr>
@@ -40,7 +40,7 @@
                             <th scope="row">Tecnico</th>
                             <th scope="row">Activo</th>
                             <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-circle"></i></a>
+                                <a class="btn btn-primary" href="usuarios_formulario.php"><i class="fas fa-plus-circle"></i></a>
                             </td>
                         </tr>
                     </tbody>
@@ -51,7 +51,7 @@
                             <th scope="row">Tecnico</th>
                             <th scope="row">Activo</th>
                             <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-circle"></i></a>
+                                <a class="btn btn-primary" href="usuarios_formulario.php"><i class="fas fa-plus-circle"></i></a>
                             </td>
                         </tr>
                     </tbody>
