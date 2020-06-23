@@ -10,7 +10,7 @@
 </head>
 
 <body>
-        <?php readfile('./menu.html'); ?>
+<?php readfile('./menu.html'); ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
