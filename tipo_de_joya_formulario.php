@@ -60,7 +60,6 @@
             </div>
             <div class="card-body">
                 <form action="marcas_guardar.php" method="post">
-
                     <div class="dropdown">
                         <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -72,53 +71,63 @@
                     </div>
                     <div class="form-group">
                         <label for="marca">Nombre</label>
-                        <input type="text" class="form-control form-control-sm" id="marca" name="marca"
-                            aria-describedby="marca_help">
+                        <input type="text" class="form-control form-control-sm" id="marca" name="marca" aria-describedby="marca_help">
                         <small id="marca_help" class="form-text text-muted">Escribe el nombre del producto</small>
                     </div>
                     <form>
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Material principal</label>
-                            <select class="form-control" id="exampleFormControlSelect1">
+                            <label for="material_principal">Material Principal</label>
+                            <select class="form-control" id="material_principal" name="material_principal">
                               <option>Seleccionar</option>
                               <option>Oro</option>
                               <option>Plata</option>
                               <option>Metal Bañado en Oro</option>
                               <option>Metal Bañado en Plata</option>
                             </select>
+                            <small id="material_principal_help" class="form-text text-muted">Selecciona el Material Principal</small>
                           </div>
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Material Secundario</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                        <label for="material_secundario">Material Secundario</label>
+                            <select class="form-control" id="material_secundario" name="material_secundario">
+                              <option>Seleccionar</option>
+                              <option>Oro</option>
+                              <option>Plata</option>
+                              <option>Metal Bañado en Oro</option>
+                              <option>Metal Bañado en Plata</option>
+                            </select>
+                            <small id="material_secundario_help" class="form-text text-muted">Selecciona el Material Secundario</small>
                         </div>
-
                         <div class="form-group">
-                            <label for="exampleFormControlSelect2">Kilates</label>
-                            <select multiple class="form-control" id="exampleFormControlSelect2">
+                            <label for="descripcion">Kilates</label>
+                            <select class="form-control" id="descripcion" name="descripcion" >
+                                <option>Seleccionar</option>
                                 <option>6</option>
                                 <option>10</option>
                                 <option>12</option>
                                 <option>24</option>
                                 <option>32</option>
                             </select>
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect3">Estado</label>
-                                <select multiple class="form-control" id="exampleFormControlSelect3">
-                                    <option>Casi nuevo</option>
-                                    <option>Casi usado</option>
-                                    <option>Usado</option>
-                                    <option>Semi Usado</option>
-                                    <option>Desgastado</option>
-                                    <option>Muy usado</option>
-                                    <option style="height: 50%;" class="alert alert-danger">Roto</option>
-                                </select>
+                            <small id="descripcion_help" class="form-text text-muted">Selecciona los Kilates</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion1">Estado</label>
+                            <select class="form-control" id="descripcion1" name="descripcion1">
+                                <option>Seleccionar</option>
+                                <option>Casi nuevo</option>
+                                <option>Casi usado</option>
+                                <option>Usado</option>
+                                <option>Semi Usado</option>
+                                <option>Desgastado</option>
+                                <option>Muy usado</option>
+                                <option style="height: 50%;" class="alert alert-danger">Roto</option>
+                            </select>
+                            <small id="descripcion1_help" class="form-text text-muted">Selecciona el estado en el que se encuentra</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Comentarios </label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
                         </div>
-                   
-                    <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-save"></i> Guardar</button>
+                        <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-save"></i> Guardar</button>
                 </form>
             </div>
         </div>
@@ -126,5 +135,4 @@
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
-
 </html>
