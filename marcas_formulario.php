@@ -16,7 +16,7 @@
     <div class="card">
       <div class="card-header">
         Marcas
-        <a type="button" class="btn btn-outline-dark float-right" href="marcas.html">Regresar</a>
+        <a type="button" class="btn btn-outline-dark float-right" href="marcas.php">Regresar</a>
       </div>
       <div class="card-body">
         <form action="marcas_guardar.php" method="post">
