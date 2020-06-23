@@ -29,25 +29,25 @@
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active">
-            <a href="tipo_de_joya_formulario.html"> <img src="img/joyas4.jpg" class="rounded mx-auto d-block"> 
-              <div class="carousel-caption d-none d-md-block " alt="Responsive image">
-                <h5> First slide label</h5>
-                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-              </div>
+              <a href="tipo_de_joya_formulario.html"> <img src="img/joyas4.jpg" class="rounded mx-auto d-block">
+                <div class="carousel-caption d-none d-md-block " alt="Responsive image">
+                  <h5> First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
             </div>
             <div class="carousel-item">
-            <a href="tipo_de_joya_formulario.html"> <img src="img/joyas2.jpg" class="rounded mx-auto d-block">
-              <div class="carousel-caption d-none d-md-block text-dark">
-                <h5>Second slide label</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              </div>
+              <a href="tipo_de_joya_formulario.html"> <img src="img/joyas2.jpg" class="rounded mx-auto d-block">
+                <div class="carousel-caption d-none d-md-block text-dark">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
             </div>
             <div class="carousel-item">
-            <a href="tipo_de_joya_formulario.html">  <img src="img/joyas3.jpg" class="rounded mx-auto d-block" >
-              <div class="carousel-caption d-none d-md-block ">
-                <h5>Third slide label</h5>
-                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-              </div>
+              <a href="tipo_de_joya_formulario.html"> <img src="img/joyas3.jpg" class="rounded mx-auto d-block">
+                <div class="carousel-caption d-none d-md-block ">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
             </div>
           </div>
           <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
