@@ -25,43 +25,8 @@
                         <small id="marca_help" class="form-text text-muted">Escribe el nombre del producto</small>
                     </div>
                     <form>
-                        <div class="form-group">
-                            <label for="material_principal">Material Principal</label>
-                            <select class="form-control" id="material_principal" name="material_principal">
-                              <option>Seleccionar</option>
-                              <option>Oro</option>
-                              <option>Plata</option>
-                              <option>Metal Bañado en Oro</option>
-                              <option>Metal Bañado en Plata</option>
-                            </select>
                             <small id="material_principal_help" class="form-text text-muted">Selecciona el Material Principal</small>
                           </div>
-                        <div class="form-group">
-                            <label for="descripcion">Kilates</label>
-                            <select class="form-control" id="descripcion" name="descripcion" >
-                                <option>Seleccionar</option>
-                                <option>6</option>
-                                <option>10</option>
-                                <option>12</option>
-                                <option>24</option>
-                                <option>32</option>
-                            </select>
-                            <small id="descripcion_help" class="form-text text-muted">Selecciona los Kilates</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="descripcion1">Estado</label>
-                            <select class="form-control" id="descripcion1" name="descripcion1">
-                                <option>Seleccionar</option>
-                                <option>Casi nuevo</option>
-                                <option>Casi usado</option>
-                                <option>Usado</option>
-                                <option>Semi Usado</option>
-                                <option>Desgastado</option>
-                                <option>Muy usado</option>
-                                <option style="height: 50%;" class="alert alert-danger">Roto</option>
-                            </select>
-                            <small id="descripcion1_help" class="form-text text-muted">Selecciona el estado en el que se encuentra</small>
-                        </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Comentarios </label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>

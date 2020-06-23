@@ -23,8 +23,6 @@
                         <tr>
                             <th style="width: 45%;" scope="col">Tipo</th>
                             <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="productos_formulario.php"><i
-                                        class="fa fa-plus"></i></a>
                             </th>
                         </tr>
                     </thead>
