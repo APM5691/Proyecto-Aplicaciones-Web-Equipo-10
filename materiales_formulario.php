@@ -19,10 +19,10 @@
             <div class="card-body">
                 <form action="productos_guardar.php" method="post">
                     <div class="form-group">
-                        <label for="marca">Id del cliente</label>
-                        <input type="text" class="form-control form-control-sm" id="marca" name="marca"
-                            aria-describedby="marca_help">
-                        <small id="marca_help" class="form-text text-muted">Escribe el id</small>
+                        <label for="id">Id del producto</label>
+                        <input type="" class="form-control form-control-sm" id="id" name="id"
+                            aria-describedby="id_help">
+                        <small id="id_help" class="form-text text-muted">Escribe el id</small>127
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Example textarea</label>
