@@ -23,7 +23,7 @@
                         <tr>
                             <th style="width: 90%;" scope="col">Marca</th>
                             <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="marcas_formulario.html"><i
+                                <a class="btn btn-outline-primary" href="marcas_formulario.php"><i
                                         class="fa fa-plus"></i></a>
                             </th>
                         </tr>
