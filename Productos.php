@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    <?php readfile('./materiales.php'); ?>
+    <a href="materiales.php" class="btn btn-success float-right"> Siguiente</a>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
