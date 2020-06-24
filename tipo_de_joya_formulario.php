@@ -24,19 +24,22 @@
                         <input type="text" class="form-control form-control-sm" id="marca" name="marca" aria-describedby="marca_help">
                         <small id="marca_help" class="form-text text-muted">Escribe el nombre del producto</small>
                     </div>
-                    <form>
+                    <div>
                             <small id="material_principal_help" class="form-text text-muted">Selecciona el Material Principal</small>
                           </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Comentarios </label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
                         </div>
-                        <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-save"></i> Guardar</button>
-                </form>
-            </div>
-        </div>
+                        <button class="btn btn-success btn-sm" type="submit">
+            <i class="fa fa-save"></i> Guardar
+          </button>
+        </form>
+      </div>
     </div>
-    <script src="js/jquery-3.5.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+  </div>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>
