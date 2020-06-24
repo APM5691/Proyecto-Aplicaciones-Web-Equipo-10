@@ -16,6 +16,7 @@
         <div class="card">
             <div class="card-header">
                 Detalles de la venta
+                <a href="detalle_venta_formulario.php"class="btn btn-success float-right">Agregar</a>
             </div>
             <div class="card-body">
                 <table class="table table-dark table table-hover">

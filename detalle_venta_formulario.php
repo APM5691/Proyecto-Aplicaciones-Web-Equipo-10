@@ -17,7 +17,7 @@
                 Formulario Para Detalle de Ventas
             </div>
             <div class="card-body">
-                <form action="marcas_guardar.php" method="post">
+                <form action="detalle_venta_guardar.php" method="post">
                     <div class="form-group">
                         <label for="marca">Id del cliente</label>
                         <input type="text" class="form-control form-control-sm" id="marca" name="marca"

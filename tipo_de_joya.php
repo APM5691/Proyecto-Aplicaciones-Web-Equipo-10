@@ -21,7 +21,8 @@
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width: 45%;" scope="col">Tipo</th>
+                            <th style="width: 90%;" scope="col">Tipo</th>
+                            <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 10%;" scope="col">
                             </th>
                         </tr>
