@@ -51,13 +51,10 @@
                         </tr>
                     </tbody>
                 </table>
+                <a href="materiales.php" class="btn btn-success float-right"> Materiales</a>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-    <a href="materiales.php" class="btn btn-success float-right"> Siguiente</a>
-=======
->>>>>>> f795a5d4885a058b4cfbce6e73fa883e9fd372ca
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
