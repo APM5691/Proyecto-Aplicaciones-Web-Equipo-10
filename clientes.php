@@ -17,19 +17,18 @@
         <div class="card">
             <div class="card-header">
                 Clientes
-                <a href="clientes_formulario.php"class="btn btn-success float-right">Agregar</a>
+                <a href="clientes_formularios.php"class="btn btn-success float-right">Agregar</a>
             </div>
             <div class="card-body">
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
                             <th style="width: 20%;" scope="col">Nombre</th>
-                            <th style="width: 20%;" scope="col">Correo</th>
-                            <th style="width: 15%;" scope="col">Perfil</th>
-                            <th style="width: 15%;" scope="col">Estatus</th>
+                            <th style="width: 30%;" scope="col">Correo</th>
+                            <th style="width: 25%;" scope="col">Perfil</th>
+                            <th style="width: 25%;" scope="col">Estatus</th>
+                            <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="clientes_formulario.php"><i
-                                        class="fa fa-plus"></i></a>
                             </th>
                         </tr>
                     </thead>
@@ -75,6 +74,7 @@
                             <th style="width: 20%;" scope="col">Localidad</th>
                             <th style="width: 20%;" scope="col">Municipio</th>
                             <th style="width: 20%;" scope="col">Estado</th>
+                            <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 5%;" scope="col">
                             </th>
                         </tr>
@@ -87,7 +87,7 @@
                             <th scope="row">Metepec</th>
                             <th scope="row">México</th>
                             <td>
-                                <a class="btn btn-primary" href="direcciones_formulario.php><i class="fas fa-plus-circle"></i></a>
+                            <a class="btn btn-primary" href="clientes_formulario.php"><i class="fas fa-plus-circle"></i></a>
                             </td>
                         </tr>
                     </tbody>

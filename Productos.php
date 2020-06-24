@@ -20,11 +20,13 @@
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width: 15%;" scope="col">Productos</th>
-                            <th style="width: 15%;" scope="col">Precio</th>
-                            <th style="width: 15%;" scope="col">Kilates</th>
-                            <th style="width: 15%;" scope="col">Estado</th>
+                            <th style="width: 25%;" scope="col">Productos</th>
+                            <th style="width: 25%;" scope="col">Precio</th>
+                            <th style="width: 25%;" scope="col">Kilates</th>
+                            <th style="width: 25%;" scope="col">Estado</th>
+                            <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 10%;" scope="col">
+                            
                             </th>
                         </tr>
                     </thead>
@@ -68,6 +70,7 @@
                         <tr>
                             <th style="width: 45%;" scope="col">Id del producto</th>
                             <th style="width: 45%;" scope="col">Material</th>
+                            <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 90%;" scope="col">
                             </th>
                         </tr>
