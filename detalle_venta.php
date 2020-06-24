@@ -15,17 +15,14 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                Marca
+                Detalles de la venta
             </div>
             <div class="card-body">
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
                             <th style="width: 90%;" scope="col">Detalle de venta</th>
-                            <th style="width: 10%;" scope="col">
-                                <a class="btn btn-outline-primary" href="detalle_venta_formulario.html"><i
-                                        class="fa fa-plus"></i></a>
-                            </th>
+                            <th style="width: 10%;" scope="col">Editar</th>
                         </tr>
                     </thead>
                     <tbody>

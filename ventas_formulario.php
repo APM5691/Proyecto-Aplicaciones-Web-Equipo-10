@@ -26,7 +26,7 @@
                         <small id="cantidad_productos_help" class="form-text text-muted">Escribe la Cantidad de productos</small>
                     </div>
                     <div class="form-group">
-                        <label for="monto_total">Monto transliterator_create_from_rules</label>
+                        <label for="monto_total">Monto</label>
                         <input type="text" class="form-control form-control-sm" id="monto_total" name="monto_total"
                             aria-describedby="monto_total_help">
                         <small id="monto_total_help" class="form-text text-muted">Escribe el monto total</small>

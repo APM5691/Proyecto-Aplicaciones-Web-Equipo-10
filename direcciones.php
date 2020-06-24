@@ -29,8 +29,6 @@
                             <th style="width: 20%;" scope="col">Municipio</th>
                             <th style="width: 20%;" scope="col">Estado</th>
                             <th style="width: 5%;" scope="col">
-                                <a class="btn btn-outline-primary" href="direcciones_formulario.php"><i
-                                        class="fa fa-plus"></i></a>
                             </th>
                         </tr>
                     </thead>
