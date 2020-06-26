@@ -16,7 +16,7 @@
     <div class="card">
       <div class="card-header">
         <div class="container mt-4">
-          <h1 class="text-center">Joyeria luminose
+          <h1 class="text-center">Joyeria luminosité
           </h1>
         </div>
       </div>
