@@ -19,8 +19,8 @@
       <div class="card-body">
         <form action="clientes_guardar.php" method="post">
           <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help" />
+            <label for="nombre_cliente">Nombre</label>
+            <input type="text" class="form-control form-control-sm" id="nombre_cliente" name="nombre_cliente" aria-describedby="nombre_help" />
             <small id="nombre_help" class="form-text text-muted">Escribe tu nombre</small>
           </div>
           <div class="form-group">
@@ -38,32 +38,47 @@
           <div class="form-group">
             <label for="perfil">¿Que eres?</label><br />
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="perfil" id="perfil" value="perfil" />
+              <input class="form-check-input" type="radio" name="perfil" id="perfil" value="Administrador" />
               <label class="form-check-label" for="perfil">Administrador</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="perfil" id="perfil" value="perfil" />
-              <label class="form-check-label" for="perfil">Usuario</label>
+              <input class="form-check-input" type="radio" name="perfil" id="perfil" value="Tecnico" />
+              <label class="form-check-label" for="perfil">Tecnico</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="perfil" id="perfil" value="Staff" />
+              <label class="form-check-label" for="perfil">Staff</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="estatus">Estatus</label><br />
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="estatus" id="estatus" value="Activo" />
+              <label class="form-check-label" for="estatus">Activo</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="estatus" id="estatus" value="Inactivo" />
+              <label class="form-check-label" for="estatus">Inactivo</label>
             </div>
           </div>
           <div class="form-group">
             <label for="Sexo">Sexo</label><br />
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Sexo" id="Hombre" value="option1" />
+              <input class="form-check-input" type="radio" name="Sexo" id="Hombre" value="Hombre" />
               <label class="form-check-label" for="Sexo">Hombre</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Sexo" id="Mujer" value="option2" />
+              <input class="form-check-input" type="radio" name="Sexo" id="Mujer" value="Mujer" />
               <label class="form-check-label" for="Sexo">Mujer</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Sexo" id="Indeterminado" value="option2" />
+              <input class="form-check-input" type="radio" name="Sexo" id="Indeterminado" value="Indeterminado" />
               <label class="form-check-label" for="Sexo">Indeterminado</label>
             </div>
           </div>
           <div class="form-group">
-            <label for="email">Direccion de E-mail </label>
-            <input type="text" class="form-control form-control-sm" id="email" name="email" aria-describedby="email" />
+            <label for="correo_electronico">Direccion de E-mail </label>
+            <input type="text" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_electronico" />
             <small id="email_help" class="form-text text-muted">Escribe tu Email</small>
           </div>
           <div class="form-group">

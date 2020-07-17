@@ -1,101 +1,39 @@
-<!DOCTYPE html>
-<html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardar Clientes Formulario</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/all.min.css" />
-</head>
-<body>
-<?php readfile('./menu.html'); ?>
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['nombre']) || empty($_POST['nombre'])) {
-            echo '<strong>Debes escribir un valor para "nombre"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para nombre es: ' . $_POST['nombre'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
+<?php
+if (
+    !isset($_POST['nombre_cliente']) || empty($_POST['nombre_cliente'])
+    || !isset($_POST['primer_apellido']) || empty($_POST['primer_apellido'])
+    // || !isset($_POST['segundo_apellido']) || empty($_POST['segundo_apellido'])
+    // || !isset($_POST['telefono']) || empty($_POST['telefono'])
+    // || !isset($_POST['correo_electronico']) || empty($_POST['correo_electronico']) || !filter_var($_POST['correo_electronico'], FILTER_VALIDATE_EMAIL)
+    // || !isset($_POST['perfil']) || !in_array($_POST['perfil'], ['Administrador', 'Técnico', 'Staff'])
+    // || !isset($_POST['estatus']) || !in_array($_POST['estatus'], ['Activo', 'Inactivo'])
+    // || !isset($_POST['password']) || empty($_POST['password']) || strlen($_POST['password']) < 8
+) {
+    header('Location: clientes_formulario.php?info=Parámetros incorrectos');
+    exit;
+}
 
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['primer_apellido']) || empty($_POST['primer_apellido'])) {
-            echo '<strong>Debes escribir un valor para "primer_apellido"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para primer_apellido es: ' . $_POST['primer_apellido'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['segundo_apellido']) || empty($_POST['segundo_apellido'])) {
-            echo '<strong>Debes escribir un valor para "segundo_apellido"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para segundo_apellido es: ' . $_POST['segundo_apellido'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
+require_once './conexion.php';
+$sql = <<<fin
+insert into cliente set
+    nombre_cliente = :nombre_cliente
+    , primer_apellido = :primer_apellido
+    , segundo_apellido = :segundo_apellido
+    , telefono = :telefono
+    , password = :password
+    , correo_electronico = :correo_electronico
+    
 
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['email']) || empty($_POST['email'])) {
-            echo '<strong>Debes escribir un valor para "email"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para email es: ' . $_POST['email'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
+fin;
 
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['password']) || empty($_POST['password'])) {
-            echo '<strong>Debes escribir un valor para "password"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para password es: ' . $_POST['password'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
-   
-
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['telefono']) || empty($_POST['telefono'])) {
-            echo '<strong>Debes escribir un valor para "telefono"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para telefono es: ' . $_POST['telefono'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['comentarios']) || empty($_POST['comentarios'])) {
-            echo '<strong>Debes escribir un valor para "comentarios"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para comentarios es: ' . $_POST['comentarios'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
-   
-
-
-    <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+$sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
+$sentencia->execute([
+    ':nombre_cliente' => $_POST['nombre_cliente']
+    , ':primer_apellido' => $_POST['primer_apellido']
+    , ':segundo_apellido' => $_POST['segundo_apellido']
+    , ':telefono' => $_POST['telefono']
+    , ':password' => $_POST['password']
+    , ':correo_electronico' => $_POST['correo_electronico']
+]);
+header('Location: clientes.php?info=Usuario creado exitosamente');
+?>

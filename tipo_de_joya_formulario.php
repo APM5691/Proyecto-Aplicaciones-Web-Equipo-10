@@ -14,7 +14,7 @@
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                Tipo dejoya</div>
+                Tipo de joya</div>
             <div class="card-body">
                 <form action="tipo_de_joya_guardar.php" method="post">
                     <div class="dropdown"></div>
@@ -24,10 +24,7 @@
                         <input type="text" class="form-control form-control-sm" id="marca" name="marca" aria-describedby="marca_help">
                         <small id="marca_help" class="form-text text-muted">Escribe el nombre del producto</small>
                     </div>
-                    <div>
-                            <small id="material_principal_help" class="form-text text-muted">Selecciona el Material Principal</small>
-                          </div>
-                        <div class="form-group">
+                            <div class="form-group">
                             <label for="exampleFormControlTextarea1">Comentarios </label>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
                         </div>
