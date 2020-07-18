@@ -62,18 +62,18 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="Sexo">Sexo</label><br />
+            <label for="sexo">Sexo</label><br />
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Sexo" id="Hombre" value="Hombre" />
-              <label class="form-check-label" for="Sexo">Hombre</label>
+              <input class="form-check-input" type="radio" name="sexo" id="Hombre" value="Hombre" />
+              <label class="form-check-label" for="sexo">Hombre</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Sexo" id="Mujer" value="Mujer" />
-              <label class="form-check-label" for="Sexo">Mujer</label>
+              <input class="form-check-input" type="radio" name="sexo" id="Mujer" value="Mujer" />
+              <label class="form-check-label" for="sexo">Mujer</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Sexo" id="Indeterminado" value="Indeterminado" />
-              <label class="form-check-label" for="Sexo">Indeterminado</label>
+              <input class="form-check-input" type="radio" name="sexo" id="Indeterminado" value="Indeterminado" />
+              <label class="form-check-label" for="sexo">Indeterminado</label>
             </div>
           </div>
           <div class="form-group">

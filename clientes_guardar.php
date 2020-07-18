@@ -7,6 +7,7 @@ if (
      || !isset($_POST['correo_electronico']) || empty($_POST['correo_electronico']) || !filter_var($_POST['correo_electronico'], FILTER_VALIDATE_EMAIL)
      || !isset($_POST['perfil']) || !in_array($_POST['perfil'], ['Administrador', 'Técnico', 'Staff'])
      || !isset($_POST['estatus']) || !in_array($_POST['estatus'], ['Activo', 'Inactivo'])
+     || !isset($_POST['sexo']) || !in_array($_POST['sexo'], ['Hombre', 'Mujer','Indeterminado'])
      || !isset($_POST['password']) || empty($_POST['password']) || strlen($_POST['password']) < 8
 ) {
     header('Location: clientes_formularios.php?info=Parámetros incorrectos');
@@ -23,6 +24,7 @@ insert into cliente set
     , telefono = :telefono
     , password = :password
     , correo_electronico = :correo_electronico
+    , sexo = :sexo
     
 
 fin;
@@ -35,6 +37,7 @@ $sentencia->execute([
     , ':telefono' => $_POST['telefono']
     , ':password' => $_POST['password']
     , ':correo_electronico' => $_POST['correo_electronico']
+    , ':sexo' => $_POST['sexo']
 ]);
 header('Location: clientes.php?info=Usuario creado exitosamente');
 ?>
