@@ -25,6 +25,8 @@ insert into cliente set
     , password = :password
     , correo_electronico = :correo_electronico
     , sexo = :sexo
+    , perfil= :perfil
+    , estatus= :estatus
     
 
 fin;
@@ -38,6 +40,8 @@ $sentencia->execute([
     , ':password' => $_POST['password']
     , ':correo_electronico' => $_POST['correo_electronico']
     , ':sexo' => $_POST['sexo']
+    , ':perfil' => $_POST['perfil']
+    , ':estatus' => $_POST['estatus']
 ]);
 header('Location: clientes.php?info=Usuario creado exitosamente');
 ?>

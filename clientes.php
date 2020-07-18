@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -33,66 +36,29 @@
                         </tr>
                     </thead>
                     <tbody>
+                    <?php
+                        $sql = 'select id_cliente, nombre_cliente, primer_apellido, correo_electronico, telefono,perfil,estatus from cliente order by primer_apellido, nombre_cliente asc';
+                        foreach ($conexion->query($sql) as $registro) {
+                            $registro['nombre_cliente'] = htmlentities($registro['nombre_cliente']);
+                            $registro['primer_apellido'] = htmlentities($registro['primer_apellido']);
+                            $registro['correo_electronico'] = htmlentities($registro['correo_electronico']);
+                        echo <<<fin
+
                         <tr>
-                            <th scope="row">Angel</th>
-                            <th scope="row">angel_palacios5691@outlook.com</th>
-                            <th scope="row">Tecnico</th>
-                            <th scope="row">Activo</th>
+                            <td scope="row">{$registro['nombre_cliente']}</td>
+                            <td scope="row">{$registro['correo_electronico']}</td>
+                            <td scope="row">{$registro['perfil']}</td>
+                            <td scope="row">{$registro['estatus']}</td>
                             <td>
-                                <a class="btn btn-primary" href="clientes_formulario.php"><i class="fas fa-plus-circle"></i></a>
+                                <a class="btn btn-secondary btn-sm" href="usuarios_editar.php?id={$registro['id_cliente']}"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Angel</th>
-                            <th scope="row">angel_palacios5691@outlook.com</th>
-                            <th scope="row">Tecnico</th>
-                            <th scope="row">Activo</th>
-                            <td>
-                                <a class="btn btn-primary" href="clientes_formulario.php"><i class="fas fa-plus-circle"></i></a>
-                            </td>
-                        </tr>
+fin;
+                }
+                        ?>
                     </tbody>
                 </table>
                 <a href="direcciones.php" class="btn btn-success float-right">Direcciones</a>
-            </div>
-        </div>
-    </div>
-    <div class="container mt-4">
-        <div class="card">
-            <div class="card-header">
-                Direcciones
-                <a href="direcciones_formulario.php"class="btn btn-success float-right">Agregar</a>
-            </div>
-            <div class="card-body">
-                <table class="table table-dark table table-hover">
-                    <thead class="thead-light">
-                        <tr>
-                            <th style="width: 15%;" scope="col">Calle</th>
-                            <th style="width: 20%;" scope="col">Numero</th>
-                            <th style="width: 20%;" scope="col">Localidad</th>
-                            <th style="width: 20%;" scope="col">Municipio</th>
-                            <th style="width: 20%;" scope="col">Estado</th>
-                            <th style="width: 10%;" scope="col">Editar</th>
-                            <th style="width: 5%;" scope="col">
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Independencia</th>
-                            <th scope="row">16</th>
-                            <th scope="row">San Lucas</th>
-                            <th scope="row">Metepec</th>
-                            <th scope="row">México</th>
-                            <td>
-                            <a class="btn btn-primary" href="clientes_formulario.php"><i class="fas fa-plus-circle"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    
-                </table>
             </div>
         </div>
     </div>
