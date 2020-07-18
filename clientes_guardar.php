@@ -2,14 +2,15 @@
 if (
     !isset($_POST['nombre_cliente']) || empty($_POST['nombre_cliente'])
     || !isset($_POST['primer_apellido']) || empty($_POST['primer_apellido'])
-    // || !isset($_POST['segundo_apellido']) || empty($_POST['segundo_apellido'])
-    // || !isset($_POST['telefono']) || empty($_POST['telefono'])
-    // || !isset($_POST['correo_electronico']) || empty($_POST['correo_electronico']) || !filter_var($_POST['correo_electronico'], FILTER_VALIDATE_EMAIL)
-    // || !isset($_POST['perfil']) || !in_array($_POST['perfil'], ['Administrador', 'Técnico', 'Staff'])
-    // || !isset($_POST['estatus']) || !in_array($_POST['estatus'], ['Activo', 'Inactivo'])
-    // || !isset($_POST['password']) || empty($_POST['password']) || strlen($_POST['password']) < 8
+     || !isset($_POST['segundo_apellido']) || empty($_POST['segundo_apellido'])
+     || !isset($_POST['telefono']) || empty($_POST['telefono'])
+     || !isset($_POST['correo_electronico']) || empty($_POST['correo_electronico']) || !filter_var($_POST['correo_electronico'], FILTER_VALIDATE_EMAIL)
+     || !isset($_POST['perfil']) || !in_array($_POST['perfil'], ['Administrador', 'Técnico', 'Staff'])
+     || !isset($_POST['estatus']) || !in_array($_POST['estatus'], ['Activo', 'Inactivo'])
+     || !isset($_POST['password']) || empty($_POST['password']) || strlen($_POST['password']) < 8
 ) {
-    header('Location: clientes_formulario.php?info=Parámetros incorrectos');
+    header('Location: clientes_formularios.php?info=Parámetros incorrectos');
+
     exit;
 }
 
