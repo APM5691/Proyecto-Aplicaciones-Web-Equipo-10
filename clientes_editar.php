@@ -31,6 +31,7 @@ if (false == $cliente) {
 ?>
 <!DOCTYPE html>
 <html lang="es-MX">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,6 +39,7 @@ if (false == $cliente) {
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
+
 <body>
     <?php readfile('./menu.html'); ?>
     <div class="container mt-4">
@@ -50,31 +52,31 @@ if (false == $cliente) {
                 <form action="clientes_actualizar.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control form-control-sm" id="nombre_cliente" name="nombre_cliente" aria-describedby="nombre_cliente_help" value="<?php echo htmlentities($cliente['nombre_cliente']);?>" required>
+                        <input type="text" class="form-control form-control-sm" id="nombre_cliente" name="nombre_cliente" aria-describedby="nombre_cliente_help" value="<?php echo htmlentities($cliente['nombre_cliente']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="primer_apellido">Primer apellido</label>
-                        <input type="text" class="form-control form-control-sm" id="primer_apellido" name="primer_apellido" aria-describedby="primer_apellido_help" value="<?php echo htmlentities($cliente['primer_apellido']);?>" required>
+                        <input type="text" class="form-control form-control-sm" id="primer_apellido" name="primer_apellido" aria-describedby="primer_apellido_help" value="<?php echo htmlentities($cliente['primer_apellido']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="segundo_apellido">Segundo apellido</label>
-                        <input type="text" class="form-control form-control-sm" id="segundo_apellido" name="segundo_apellido" aria-describedby="segundo_apellido_help" value="<?php echo htmlentities($cliente['segundo_apellido']);?>">
+                        <input type="text" class="form-control form-control-sm" id="segundo_apellido" name="segundo_apellido" aria-describedby="segundo_apellido_help" value="<?php echo htmlentities($cliente['segundo_apellido']); ?>">
                     </div>
                     <div class="form-group">
-                        <label for="telefono_oficina">Teléfono de oficina</label>
-                        <input type="text" class="form-control form-control-sm" id="telefono" name="telefono" aria-describedby="telefono_oficina_help" value="<?php echo htmlentities($cliente['telefono']);?>" required>
+                        <label for="telefono">Teléfono de oficina</label>
+                        <input type="text" class="form-control form-control-sm" id="telefono" name="telefono" aria-describedby="telefono_oficina_help" value="<?php echo htmlentities($cliente['telefono']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="correo">Correo</label>
-                        <input type="email" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_help" value="<?php echo htmlentities($cliente['correo_electronico']);?>" required>
+                        <input type="email" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" class="form-control form-control-sm" id="contrasena" name="contrasena" aria-describedby="contrasena_help" required>
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control form-control-sm" id="password" name="password" aria-describedby="password_help" required>
                     </div>
                     <div class="form-group">
-                        <label for="contrasena_confirma">Contraseña (confirma)</label>
-                        <input type="password" class="form-control form-control-sm" id="contrasena_confirma" name="contrasena_confirma" aria-describedby="contrasena_help" required>
+                        <label for="password_confirma">Contraseña (confirma)</label>
+                        <input type="password" class="form-control form-control-sm" id="password_confirma" name="password_confirma" aria-describedby="password_help" required>
                     </div>
                     <div class="form-group">
                         <label for="perfil">Perfil</label><br>
@@ -99,8 +101,23 @@ if (false == $cliente) {
                             <label class="form-check-label" for="estatus2">Inactivo</label>
                         </div>
                     </div>
+                    <div class="form-group">
+                        <label for="sexo">Sexo</label><br />
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Hombre" <?php echo 'Hombre' == $cliente['sexo'] ? 'checked' : ''; ?>/>
+                            <label class="form-check-label" for="sexo">Hombre</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Mujer" <?php echo 'Mujer' == $cliente['sexo'] ? 'checked' : ''; ?>/>
+                            <label class="form-check-label" for="sexo">Mujer</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Indeterminado" <?php echo 'Indeterminado' == $cliente['sexo'] ? 'checked' : ''; ?>/>
+                            <label class="form-check-label" for="sexo">Indeterminado</label>
+                        </div>
+                    </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
-                    <input type="hidden" name="id" value="<?php echo $cliente['id'];?>">
+                    <input type="hidden" name="id_cliente" value="<?php echo $cliente['id_cliente']; ?>">
                 </form>
             </div>
         </div>

@@ -15,6 +15,7 @@
             <div class="card-header">
                 Productos
                 <a href="productos_formulario.php"class="btn btn-success float-right">Agregar</a>
+                <a href="productos.php"class="btn btn-success float-right">Agregar</a>
             </div>
             <div class="card-body">
                 <table class="table table-dark table table-hover">
