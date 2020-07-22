@@ -50,7 +50,7 @@ require_once './conexion.php';
                             <td scope="row">{$registro['perfil']}</td>
                             <td scope="row">{$registro['estatus']}</td>
                             <td>
-                                <a class="btn btn-secondary btn-sm" href="usuarios_editar.php?id={$registro['id_cliente']}"><i class="fa fa-edit"></i></a>
+                                <a class="btn btn-secondary btn-sm" href="clientes_editar.php?id={$registro['id_cliente']}"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
 fin;
