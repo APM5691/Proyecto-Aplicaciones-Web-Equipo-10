@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -22,61 +25,34 @@
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width: 30%;" scope="col">Cantidad de productos</th>
-                            <th style="width: 30%;" scope="col">Monto total</th>
-                            <th style="width: 30%;" scope="col">Subtotal</th>
+                            <th style="width: 90%;" scope="col">Monto total</th>
                             <th style="width: 10%;" scope="col">Editar</th>
                         </tr>
                     </thead>
                     <tbody>
+                    <?php
+                        $sql = 'select monto_total,id_venta from venta order by monto_total asc';
+                        foreach ($conexion->query($sql) as $registro) {
+                            $registro['monto_total'] = htmlentities($registro['monto_total']);
+                            $registro['id_venta'] = htmlentities($registro['id_venta']);
+                        echo <<<fin
+
                         <tr>
-                            <th scope="row">5</th>
-                            <th scope="row">51020</th>
-                            <th scope="row">40000</th>
+                            <td scope="row">{$registro['monto_total']}</td>
                             <td>
-                                <a class="btn btn-primary" href="ventas_formulario.html"><i class="fas fa-plus-square"></i></a>
+                                <a class="btn btn-secondary btn-sm" href="ventas_editar.php?id={$registro['id_venta']}"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <th scope="row">1</th>
-                            <th scope="row">2120</th>
-                            <th scope="row">12200</th>
-                            <td>
-                                <a class="btn btn-primary" href="ventas_formulario.html"><i class="fas fa-plus-square"></i></a>
-                            </td>
-                        </tr>
+fin;
+                }
+                        ?>
                     </tbody>
                 </table>
                 <a href="detalle_venta.php" class="btn btn-success float-right">Detalle de las ventas</a>
             </div>
         </div>
     </div>
-    <div class="container mt-4">
-        <div class="card">
-            <div class="card-header">
-                Detalles de la venta
-                <a href="detalle_venta_formulario.php"class="btn btn-success float-right">Agregar</a>
-            </div>
-            <div class="card-body">
-                <table class="table table-dark table table-hover">
-                    <thead class="thead-light">
-                        <tr>
-                            <th style="width: 90%;" scope="col">Detalle de venta</th>
-                            <th style="width: 10%;" scope="col">Editar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Luminosete</th>
-                            <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-square"></i></a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
+    
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>

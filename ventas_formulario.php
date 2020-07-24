@@ -18,25 +18,26 @@
             </div>
             <div class="card-body">
                 <form action="ventas_guardar.php" method="post">
-
-                    <div class="form-group">
-                        <label for="cantidad_productos">Cantidad de productos</label>
-                        <input type="text" class="form-control form-control-sm" id="cantidad_productos" name="cantidad_productos"
-                            aria-describedby="cantidad_productos_help">
-                        <small id="cantidad_productos_help" class="form-text text-muted">Escribe la Cantidad de productos</small>
-                    </div>
+                
                     <div class="form-group">
                         <label for="monto_total">Monto</label>
-                        <input type="text" class="form-control form-control-sm" id="monto_total" name="monto_total"
+                        <input type="float" class="form-control form-control-sm" id="monto_total" name="monto_total"
                             aria-describedby="monto_total_help">
                         <small id="monto_total_help" class="form-text text-muted">Escribe el monto total</small>
                     </div>
                     <div class="form-group">
-                        <label for="subtotal">Subtotal</label>
-                        <input type="text" class="form-control form-control-sm" id="subtotal" name="subtotal"
-                            aria-describedby="subtotal_help">
-                        <small id="subtotal_help" class="form-text text-muted">Escribe el monto total</small>
+                        <label for="direcciones_id">direcciones_id</label>
+                        <input type="int" class="form-control form-control-sm" id="direcciones_id" name="direcciones_id"
+                            aria-describedby="direcciones_id_help">
+                        <small id="direcciones_id" class="form-text text-muted">Escribir la direcciones_id</small>
                     </div>
+                    <div class="form-group">
+                        <label for="clientes_id1">clientes_id1</label>
+                        <input type="int" class="form-control form-control-sm" id="clientes_id1" name="clientes_idl"
+                            aria-describedby="clientes_id1_help">
+                        <small id="clientes_id1_help" class="form-text text-muted">Escribe la clientes_idl</small>
+                    </div>
+
                     <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-save"></i> Guardar</button>
                 </form>
             </div>
