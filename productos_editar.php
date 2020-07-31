@@ -25,7 +25,7 @@ $sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY])
 $sentencia->execute([':id' => $_REQUEST['id']]);
 $cliente = $sentencia->fetch(PDO::FETCH_ASSOC);
 if (false == $cliente) {
-    header('Location: productos.php?info=No se encontró el producto');
+    header('Location: Productos.php?info=No se encontró el producto');
     exit;
 }
 ?>
@@ -63,7 +63,7 @@ if (false == $cliente) {
                         <input type="text" class="form-control form-control-sm" id="no_existencias" name="no_existencias" aria-describedby="no_existencias_help" value="<?php echo htmlentities($cliente['primer_apellido']); ?>" required>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="numbers" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_oficina_help" value="<?php echo htmlentities($cliente['telefono']); ?>" required>
+                        <input type="number" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_oficina_help" value="<?php echo htmlentities($cliente['telefono']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="descricion">Descripcion</label>

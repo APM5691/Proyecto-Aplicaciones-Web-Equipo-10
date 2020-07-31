@@ -1,27 +1,40 @@
-<!DOCTYPE html>
-<html lang="es-MX">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guardar Producto</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
-  <link rel="stylesheet" href="css/all.min.css" />
-</head>
-<body>
-<?php readfile('./menu.html'); ?>
-    <div class="container">
-    <pre>
-    <?php
-        if (!isset($_POST['producto']) || empty($_POST['producto'])) {
-            echo '<strong>Debes escribir un valor para "producto"</strong>';
-        } else {
-            echo '<strong>El valor que escribiste para producto es: ' . $_POST['producto'] . '</strong>';
-        }
-        ?>
-    </pre>
-    </div>
-    <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+<?php
+if (
+  !isset($_POST['nombre_producto']) || empty($_POST['nombre_producto'])
+  || !isset($_POST['tipo_de_joya_id']) || empty($_POST['tipo_de_joya_id'])
+   || !isset($_POST['no_existencias']) || empty($_POST['no_existencias'])
+   || !isset($_POST['precio']) || empty($_POST['precio'])
+   || !isset($_POST['descricion']) || empty($_POST['descricion'])
+   || !isset($_POST['medida']) || !in_array($_POST['medida'])
+   || !isset($_POST['precio_oferta']) || !in_array($_POST['precio_oferta'])
+   || !isset($_POST['foto']) || !in_array($_POST['foto'])
+   || !isset($_POST['foto_original']) || empty($_POST['foto_original'])
+    header('Location: productos_formulario.php?info=Parámetros incorrectos');
+    exit;
+}
+require_once './conexion.php';
+$sql = <<<fin
+insert into producto set
+     nombre_producto = :nombre_producto
+    , tipo_de_joya_id = :tipo_de_joya_id
+    , no_existencias = :no_existencias
+    , precio = :precio
+    , descricion = :descricion
+    , medida = :medida
+    , precio_oferta = :precio_oferta
+    , foto = :foto
+    , foto_original = :foto_original
+fin;
+$sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
+$sentencia->execute([
+    ':nombre_producto' => $_POST['nombre_producto']
+    , ':tipo_de_joya_id' => $_POST['tipo_de_joya_id']
+    , ':no_existencias' => $_POST['no_existencias']
+    , ':precio' => $_POST['precio']
+    , ':descricion' => $_POST['descricion']
+    , ':medida' => $_POST['medida']
+    , ':precio_oferta' => $_POST['precio_oferta']
+    , ':foto' => $_POST['foto']
+    , ':foto_original' => $_POST['foto_original']
+]);
+?>

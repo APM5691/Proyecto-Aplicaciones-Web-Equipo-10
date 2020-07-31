@@ -18,13 +18,6 @@
             </div>
             <div class="card-body">
                 <form action="productos_guardar.php" method="post">
-                    <div class="dropdown">
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label for="nombre_producto">Nombre</label>
                         <input type="text" class="form-control form-control-sm" id="nombre_producto" name="nombre_producto"

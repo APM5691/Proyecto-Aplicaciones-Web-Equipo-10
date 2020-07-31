@@ -31,16 +31,16 @@ where
 fin;
 $sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
 $sentencia->execute([
-    ':nombre_cliente' => $_POST['nombre_cliente']
-    , ':primer_apellido' => $_POST['primer_apellido']
-    , ':segundo_apellido' => $_POST['segundo_apellido']
-    , ':telefono' => $_POST['telefono']
-    , ':correo_electronico' => $_POST['correo_electronico']
-    , ':password' => $_POST['password']
-    , ':sexo' => $_POST['sexo']
-    , ':perfil' => $_POST['perfil']
-    , ':estatus' => $_POST['estatus']
-    , ':id_cliente' => $_POST['id_cliente']
+    ':nombre_producto' => $_POST['nombre_producto']
+    , ':tipo_de_joya_id' => $_POST['tipo_de_joya_id']
+    , ':no_existencias' => $_POST['no_existencias']
+    , ':precio' => $_POST['precio']
+    , ':descricion' => $_POST['descricion']
+    , ':medida' => $_POST['medida']
+    , ':precio_oferta' => $_POST['precio_oferta']
+    , ':foto' => $_POST['foto']
+    , ':foto_original' => $_POST['foto_original']
+    , ':id_producto' => $_POST['id_producto']
 ]);
- header('Location: clientes.php?info=Usuario actualizado exitosamente');
+ header('Location: Productos.php?info=Usuario actualizado exitosamente');
  ?>
