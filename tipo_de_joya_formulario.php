@@ -10,33 +10,33 @@
 </head>
 
 <body>
-<?php readfile('./menu.html'); ?>
+    <?php readfile('./menu.html'); ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
                 Tipo de joya</div>
             <div class="card-body">
                 <form action="tipo_de_joya_guardar.php" method="post">
-                    <div class="dropdown"></div>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"></div>
+                <div class="dropdown"></div>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink"></div>
                     <div class="form-group">
-                        <label for="marca">Nombre</label>
-                        <input type="text" class="form-control form-control-sm" id="marca" name="marca" aria-describedby="marca_help">
-                        <small id="marca_help" class="form-text text-muted">Escribe el nombre del producto</small>
+                        <label for="tipo_joya">Tipo de joya</label>
+                        <input type="text" class="form-control form-control-sm" id="tipo_joya" name="tipo_joya" aria-describedby="tipo_joya_help" />
+                        <small id="tipo_joya_help" class="form-text text-muted">Escribe el nombre de tu tipo de joya</small>
                     </div>
-                            <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Comentarios </label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
-                        </div>
-                        <button class="btn btn-success btn-sm" type="submit">
-            <i class="fa fa-save"></i> Guardar
-          </button>
-        </form>
-      </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Comentarios </label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button class="btn btn-success btn-sm" type="submit">
+                        <i class="fa fa-save"></i> Guardar
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>

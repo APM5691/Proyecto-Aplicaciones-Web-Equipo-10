@@ -1,3 +1,6 @@
+<?php
+require_once './conexion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -23,25 +26,28 @@
                         <tr>
                             <th style="width: 90%;" scope="col">Tipo</th>
                             <th style="width: 10%;" scope="col">Editar</th>
-                            <th style="width: 10%;" scope="col">
-                            </th>
+                            <th style="width: 10%;" scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>
+                    <?php
+                        $sql = 'select id_tipo_de_joya, tipo_joya from tipo_de_joya order by id_tipo_de_joya asc';
+                        foreach ($conexion->query($sql) as $registro) {
+                            $registro['tipo_joya'] = htmlentities($registro['tipo_joya']);
+                            $registro['id_tipo_de_joya'] = htmlentities($registro['id_tipo_de_joya']);
+                            
+                        echo <<<fin
+
                         <tr>
-                            <th scope="row">Pulceras</th>
+                            <td scope="row">{$registro['tipo_joya']}</td>
+                            
                             <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-square"></i></a>
+                                <a class="btn btn-secondary btn-sm" href="tipo_de_joya_editar.php?id_tipo_de_joya={$registro['id_tipo_de_joya']}"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Aretes</th>
-                            <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-square"></i></a>
-                            </td>
-                        </tr>
+fin;
+                }
+                        ?>
                     </tbody>
                 </table>
             </div>
