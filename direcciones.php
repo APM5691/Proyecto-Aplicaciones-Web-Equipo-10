@@ -38,7 +38,7 @@ require_once './conexion.php';
                     </thead>
                     <tbody>
                     <?php
-                        $sql = 'select id_direccion, clientes_id, calle, numero, localidad, municipio_id, estado_id from direccion order by localidad';
+                        $sql = 'select id_direccion, clientes_id, calle, numero, localidad, municipio_id, estado_id from direccion order by id_direccion asc';
                         foreach ($conexion->query($sql) as $registro) {
                             $registro['clientes_id'] = htmlentities($registro['clientes_id']);
                             $registro['calle'] = htmlentities($registro['calle']);
