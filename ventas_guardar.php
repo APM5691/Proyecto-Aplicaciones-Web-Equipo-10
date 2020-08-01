@@ -21,5 +21,5 @@ $sentencia->execute([
     , ':direcciones_id' => $_POST['direcciones_id']
      , ':clientes_id1' => $_POST['clientes_id1']
 ]);
-header('Location: ventas.php?info=Venta creado exitosamente');
+header('Location: ventas.php?info=Venta creada exitosamente');
 ?>
