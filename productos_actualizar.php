@@ -1,20 +1,22 @@
 <?php
 if (
-  !isset($_POST['nombre_producto']) || empty($_POST['nombre_producto'])
-  || !isset($_POST['tipo_de_joya_id']) || empty($_POST['tipo_de_joya_id'])
-   || !isset($_POST['no_existencias']) || empty($_POST['no_existencias'])
-   || !isset($_POST['precio']) || empty($_POST['precio'])
-   || !isset($_POST['descricion']) || empty($_POST['descricion'])
-   || !isset($_POST['medida']) || !in_array($_POST['medida'])
-   || !isset($_POST['precio_oferta']) || !in_array($_POST['precio_oferta'])
-   || !isset($_POST['foto']) || !in_array($_POST['foto'])
-   || !isset($_POST['foto_original']) || empty($_POST['foto_original'])
+    !isset($_POST['nombre_producto']) || empty($_POST['nombre_producto'])
+    || !isset($_POST['tipo_de_joya_id']) || empty($_POST['tipo_de_joya_id'])
+     || !isset($_POST['no_existencias']) || empty($_POST['no_existencias'])
+     || !isset($_POST['precio']) || empty($_POST['precio'])
+     || !isset($_POST['descricion']) || empty($_POST['descricion'])
+     || !isset($_POST['medida']) || !in_array($_POST['medida'])
+     || !isset($_POST['precio_oferta']) || !in_array($_POST['precio_oferta'])
+     || !isset($_POST['foto']) || !in_array($_POST['foto'])
+     || !isset($_POST['foto_original']) || empty($_POST['foto_original'])
+) {
     header('Location: productos_formulario.php?info=Parámetros incorrectos');
     exit;
 }
+
 require_once './conexion.php';
 $sql = <<<fin
-insert into producto set
+update producto set
      nombre_producto = :nombre_producto
     , tipo_de_joya_id = :tipo_de_joya_id
     , no_existencias = :no_existencias
@@ -24,6 +26,8 @@ insert into producto set
     , precio_oferta = :precio_oferta
     , foto = :foto
     , foto_original = :foto_original
+where
+    id_producto = :id_producto
 fin;
 $sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
 $sentencia->execute([
@@ -36,5 +40,7 @@ $sentencia->execute([
     , ':precio_oferta' => $_POST['precio_oferta']
     , ':foto' => $_POST['foto']
     , ':foto_original' => $_POST['foto_original']
+    , ':id_producto' => $_POST['id_producto']
 ]);
-?>
+ header('Location: Productos.php?info=Usuario actualizado exitosamente');
+ ?>

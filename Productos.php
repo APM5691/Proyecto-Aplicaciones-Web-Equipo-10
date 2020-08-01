@@ -15,7 +15,6 @@
             <div class="card-header">
                 Productos
                 <a href="productos_formulario.php"class="btn btn-success float-right">Agregar</a>
-                <a href="productos.php"class="btn btn-success float-right">Agregar</a>
             </div>
             <div class="card-body">
                 <table class="table table-dark table table-hover">
@@ -27,31 +26,31 @@
                             <th style="width: 25%;" scope="col">Estado</th>
                             <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 10%;" scope="col">
-                            
                             </th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        <tbody>
+                        <?php
+                        $sql = 'select id_producto, tipo_de_joya_id, nombre_producto, no_existencias, precio, descripcion, medida, precio_oferta, foto, foto_original from producto order by id_producto asc';
+                        foreach ($conexion->query($sql) as $registro) {
+                            $registro['nombre_producto'] = htmlentities($registro['nombre_producto']);
+                            $registro['no_existencias'] = htmlentities($registro['no_existencias']);
+                            $registro['descripcion'] = htmlentities($registro['descripcion']);
+                            $registro['medida'] = htmlentities($registro['medida']);
+                        echo <<<fin
+
                         <tr>
-                            <th scope="row">Anillos</th>
-                            <th scope="row">200$</th>
-                            <th scope="row">6</th>
-                            <th scope="row">Casi nuevo</th>
+                            <td scope="row">{$registro['nombre_producto']}</td>
+                            <td scope="row">{$registro['medida']}</td>
+                            <td scope="row">{$registro['no_existencias']}</td>
+                            <td scope="row">{$registro['precio']}</td>
+                            <td scope="row">{$registro['precio_oferta']}</td>
                             <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-square"></i></a>
+                                <a class="btn btn-secondary btn-sm" href="productos_editar.php?id={$registro['id_producto']}"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
-                    </tbody>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Diademas</th>
-                            <th scope="row">350$</th>
-                            <th scope="row">10</th>
-                            <th scope="row">Usado</th>
-                            <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-square"></i></a>
-                            </td>
-                        </tr>
+fin;
+                }
+                        ?>
                     </tbody>
                 </table>
                 <a href="materiales.php" class="btn btn-success float-right"> Materiales</a>
@@ -69,21 +68,29 @@
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width: 45%;" scope="col">Id del producto</th>
                             <th style="width: 45%;" scope="col">Material</th>
                             <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 90%;" scope="col">
                             </th>
                         </tr>
-                    </thead>
                     <tbody>
+                        <?php
+                        $sql = 'select id_material, nombre, tipo_material from material order by id_material asc';
+                        foreach ($conexion->query($sql) as $registro) {
+                            $registro['nombre'] = htmlentities($registro['nombre']);
+                            $registro['tipo_material'] = htmlentities($registro['tipo_material']);
+                        echo <<<fin
+
                         <tr>
-                            <th scope="row">127</th>
-                            <th scope="row">Oro</th>
+                            <td scope="row">{$registro['nombre']}</td>
+                            <td scope="row">{$registro['tipo_material']}</td>
                             <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-square"></i></a>
+                                <a class="btn btn-secondary btn-sm" href="material_editar.php?id={$registro['id_producto']}"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
+fin;
+                }
+                        ?>
                     </tbody>
                 </table>
             </div>
