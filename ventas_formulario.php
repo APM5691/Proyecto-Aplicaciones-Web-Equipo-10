@@ -33,9 +33,9 @@
                     </div>
                     <div class="form-group">
                         <label for="clientes_id1">clientes_id1</label>
-                        <input type="int" class="form-control form-control-sm" id="clientes_id1" name="clientes_idl"
+                        <input type="int" class="form-control form-control-sm" id="clientes_id1" name="clientes_id1"
                             aria-describedby="clientes_id1_help">
-                        <small id="clientes_id1_help" class="form-text text-muted">Escribe la clientes_idl</small>
+                        <small id="clientes_id1_help" class="form-text text-muted">Escribe la clientes_id1</small>
                     </div>
 
                     <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-save"></i> Guardar</button>

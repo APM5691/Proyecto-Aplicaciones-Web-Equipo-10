@@ -1,9 +1,14 @@
 <?php
+if (!isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
+    header('Location: ventas.php');
+    exit;
+}
 
 require_once './conexion.php';
 $sql = <<<fin
 select
-    monto_total
+    id_venta
+    , monto_total
     , direcciones_id
     , clientes_id1
 from
@@ -50,7 +55,7 @@ if (false == $venta) {
                         </div>
                         <div class="form-group">
                             <label for="clientes_id1">clientes_id1</label>
-                            <input type="int" class="form-control form-control-sm" id="clientes_id1" name="clientes_id1" aria-describedby="clientes_id1_help" value="<?php echo htmlentities($venta['clientes_id1']);?>">
+                            <input type="int" class="form-control form-control-sm" id="clientes_id1" name="clientes_id1" aria-describedby="clientes_id1_help" value="<?php echo htmlentities($venta['clientes_id1']);?>" required>
                         </div>
                         
                         
