@@ -42,5 +42,5 @@ $sentencia->execute([
     , ':foto_original' => $_POST['foto_original']
     , ':id_producto' => $_POST['id_producto']
 ]);
- header('Location: Productos.php?info=Usuario actualizado exitosamente');
+ header('Location: Productos.php?info=Producto actualizado exitosamente');
  ?>

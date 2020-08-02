@@ -1,6 +1,6 @@
 <?php
 if (!isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
-    header('Location: clientes.php');
+    header('Location: Productos.php');
     exit;
 }
 require_once './conexion.php';
