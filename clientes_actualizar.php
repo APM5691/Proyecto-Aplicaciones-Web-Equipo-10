@@ -36,7 +36,7 @@ $sentencia->execute([
     , ':segundo_apellido' => $_POST['segundo_apellido']
     , ':telefono' => $_POST['telefono']
     , ':correo_electronico' => $_POST['correo_electronico']
-    , ':password' => $_POST['password']
+    , ':password' => password_hash( $_POST['password'], PASSWORD_BCRYPT,['cost'=>12])
     , ':sexo' => $_POST['sexo']
     , ':perfil' => $_POST['perfil']
     , ':estatus' => $_POST['estatus']
