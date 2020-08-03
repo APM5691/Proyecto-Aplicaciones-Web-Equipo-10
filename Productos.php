@@ -20,11 +20,11 @@
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
                         <tr>
-                            <th style="width: 25%;" scope="col">Productos</th>
-                            <th style="width: 25%;" scope="col">Precio</th>
-                            <th style="width: 25%;" scope="col">Kilates</th>
-                            <th style="width: 25%;" scope="col">Estado</th>
-                            <th style="width: 10%;" scope="col">Editar</th>
+                            <th style="width: 20%;" scope="col">Productos</th>
+                            <th style="width: 20%;" scope="col">Medida</th>
+                            <th style="width: 20%;" scope="col">Existencias</th>
+                            <th style="width: 20%;" scope="col">Precio</th>
+                            <th style="width: 20%;" scope="col">Precio Oferta</th>
                             <th style="width: 10%;" scope="col">
                             </th>
                         </tr>
