@@ -37,4 +37,5 @@ $sentencia->execute([
     , ':foto' => $_POST['foto']
     , ':foto_original' => $_POST['foto_original']
 ]);
+header('Location: Productos.php?info=Producto creado exitosamente');
 ?>

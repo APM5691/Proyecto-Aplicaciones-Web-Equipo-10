@@ -1,4 +1,6 @@
 <?php
+// print_r($_POST);
+// exit;
 if (
     !isset($_POST['nombre_cliente']) || empty($_POST['nombre_cliente'])
     || !isset($_POST['primer_apellido']) || empty($_POST['primer_apellido'])
@@ -8,7 +10,8 @@ if (
      || !isset($_POST['perfil']) || !in_array($_POST['perfil'], ['Administrador', 'Técnico', 'Staff'])
      || !isset($_POST['estatus']) || !in_array($_POST['estatus'], ['Activo', 'Inactivo'])
      || !isset($_POST['sexo']) || !in_array($_POST['sexo'], ['Hombre', 'Mujer','Indeterminado'])
-     || !isset($_POST['password']) || empty($_POST['password']) || strlen($_POST['password']) < 8
+      || !isset($_POST['password']) || empty($_POST['password']) || strlen($_POST['password']) < 8
+      || $_POST['password'] =! $_POST['password2']
 ) {
     header('Location: clientes_formularios.php?info=Parámetros incorrectos');
 
@@ -37,7 +40,7 @@ $sentencia->execute([
     , ':primer_apellido' => $_POST['primer_apellido']
     , ':segundo_apellido' => $_POST['segundo_apellido']
     , ':telefono' => $_POST['telefono']
-    , ':password' => $_POST['password']
+    , ':password' => password_hash( $_POST['password'], PASSWORD_BCRYPT,['cost'=>12])
     , ':correo_electronico' => $_POST['correo_electronico']
     , ':sexo' => $_POST['sexo']
     , ':perfil' => $_POST['perfil']

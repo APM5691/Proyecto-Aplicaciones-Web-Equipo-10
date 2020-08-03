@@ -20,17 +20,17 @@
         <form action="clientes_guardar.php" method="post">
           <div class="form-group">
             <label for="nombre_cliente">Nombre</label>
-            <input type="text" class="form-control form-control-sm" id="nombre_cliente" name="nombre_cliente" aria-describedby="nombre_help" />
+            <input type="text" class="form-control form-control-sm" id="nombre_cliente" name="nombre_cliente" aria-describedby="nombre_help" required/>
             <small id="nombre_help" class="form-text text-muted">Escribe tu nombre</small>
           </div>
           <div class="form-group">
             <label for="primer_apellido">Primer Apellido</label>
-            <input type="text" class="form-control form-control-sm" id="primer_apellido" name="primer_apellido" aria-describedby="primer_apellido" />
+            <input type="text" class="form-control form-control-sm" id="primer_apellido" name="primer_apellido" aria-describedby="primer_apellido" required/>
             <small id="primer_apellido_help" class="form-text text-muted">Escribe tu primer Apellido</small>
           </div>
           <div class="form-group">
             <label for="segundo_apellido">Segundo Apellido</label>
-            <input type="text" class="form-control form-control-sm" id="segundo_apellido" name="segundo_apellido" aria-describedby="segundo_apellido" />
+            <input type="text" class="form-control form-control-sm" id="segundo_apellido" name="segundo_apellido" aria-describedby="segundo_apellido" required/>
             <small id="segundo_apellido_help" class="form-text text-muted">Escribe tu segundo nombre si tienes</small>
           </div>
 
@@ -78,19 +78,24 @@
           </div>
           <div class="form-group">
             <label for="correo_electronico">Direccion de E-mail </label>
-            <input type="text" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_electronico" />
+            <input type="text" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_electronico" required/>
             <small id="email_help" class="form-text text-muted">Escribe tu Email</small>
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control form-control-sm" id="password" name="password" aria-describedby="password" />
-            <small id="password_help" class="form-text text-muted">Escribe tu Password</small>
+            <label for="password">Contraseña</label>
+            <input type="password" class="form-control form-control-sm" id="password" name="password" aria-describedby="password" required/>
+            <small id="password_help" class="form-text text-muted">Escribe tu Contraseña</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Confirmar Contraseña</label>
+            <input type="password" class="form-control form-control-sm" id="password2" name="password2" aria-describedby="password2" required/>
+            <small id="password_help" class="form-text text-muted">Confirmar tu Contraseña</small>
           </div>
 
 
           <div class="form-group">
             <label for="telefono">Telefono</label>
-            <input type="tel" class="form-control form-control-sm" id="telefono" name="telefono" aria-describedby="telefono" />
+            <input type="tel" class="form-control form-control-sm" id="telefono" name="telefono" aria-describedby="telefono" required/>
             <small id="telefono_help" class="form-text text-muted">Telefono</small>
           </div>
           <div class="form-group">

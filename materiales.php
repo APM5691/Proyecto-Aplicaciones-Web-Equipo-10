@@ -18,21 +18,46 @@
             <div class="card-body">
                 <table class="table table-dark table table-hover">
                     <thead class="thead-light">
+                    </tbody>
+                </table>
+                <a href="materiales.php" class="btn btn-success float-right"> Materiales</a>
+            </div>
+        </div>
+    </div>
+    <div>
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                Materiales
+                <a href="materiales_formulario.php"class="btn btn-success float-right">Agregar</a>
+            </div>
+            <div class="card-body">
+                <table class="table table-dark table table-hover">
+                    <thead class="thead-light">
                         <tr>
-                            <th style="width: 45%;" scope="col">Id del producto</th>
                             <th style="width: 45%;" scope="col">Material</th>
+                            <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 90%;" scope="col">
                             </th>
                         </tr>
-                    </thead>
                     <tbody>
+                        <?php
+                        $sql = 'select id_material, nombre, tipo_material from material order by id_material asc';
+                        foreach ($conexion->query($sql) as $registro) {
+                            $registro['nombre'] = htmlentities($registro['nombre']);
+                            $registro['tipo_material'] = htmlentities($registro['tipo_material']);
+                        echo <<<fin
+
                         <tr>
-                            <th scope="row">127</th>
-                            <th scope="row">Oro</th>
+                            <td scope="row">{$registro['nombre']}</td>
+                            <td scope="row">{$registro['tipo_material']}</td>
                             <td>
-                                <a class="btn btn-primary"><i class="fas fa-plus-square"></i></a>
+                                <a class="btn btn-secondary btn-sm" href="material_editar.php?id={$registro['id_material']}"><i class="fa fa-edit"></i></a>
                             </td>
                         </tr>
+fin;
+                }
+                        ?>
                     </tbody>
                 </table>
             </div>
