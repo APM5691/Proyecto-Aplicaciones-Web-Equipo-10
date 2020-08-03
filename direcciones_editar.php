@@ -38,37 +38,67 @@ if (false == $direccion) {
 <body>
     <?php readfile('./menu.html'); ?>
     <div class="container mt-4">
-        <div class="card">
-            <div class="card-header">
-                <a class="btn btn-light btn-sm float-right" href="direcciones.php"><i class="fa fa-arrow-circle-left"></i> regresar</a>
-                <i class="fa fa-users"></i> direcciones
-            </div>
-            <div class="card-body">
-                <form action="direcciones_actualizar.php" method="post">
-                    <div class="form-group">
-                        <label for="clientes_id">clientes_id</label>
-                        <input type="int" class="form-control form-control-sm" id="clientes_id" name="clientes_id" aria-describedby="clientes_id_help" value="<?php echo htmlentities($direccion['clientes_id']);?>" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="calle">Calle</label>
-                        <input type="text" class="form-control form-control-sm" id="calle" name="calle" aria-describedby="calle_help" value="<?php echo htmlentities($direccion['calle']);?>" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="numero">Numero</label>
-                        <input type="int" class="form-control form-control-sm" id="numero" name="numero" aria-describedby="numero_help" value="<?php echo htmlentities($direccion['numero']);?>" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="localidad">Localidad</label>
-                        <input type="text" class="form-control form-control-sm" id="localidad" name="localidad" aria-describedby="localidad_help" value="<?php echo htmlentities($direccion['localidad']);?>" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="estado_id">Número del estado</label>
-                        <input type="int" class="form-control form-control-sm" id="estado_id" name="estado_id" aria-describedby="estado_id_help" value="<?php echo htmlentities($direccion['estado_id']);?>" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="municipio_id">Número del municipio</label>
-                        <input type="int" class="form-control form-control-sm" id="municipio_id" name="municipio_id" aria-describedby="municipio_id_help" value="<?php echo htmlentities($direccion['municipio_id']);?>" required>
-                    </div>
+    <div class="card">
+      <div class="card-header">
+        Formulario para su direccion
+      </div>
+
+      <div class="card-body">
+        <form action="direcciones_guardar.php" method="post">
+        <div class="form-group">
+            <label for="clientes_id">Id cliente</label>
+            <input type="int" class="form-control form-control-sm" id="clientes_id" name="clientes_id" aria-describedby="clientes_id_help" value="<?php echo htmlentities($direccion['clientes_id']);?>" required>
+            <small id="clientes_id_help" class="form-text text-muted">Escribe el número del id del cliente</small>
+          </div>
+          <div class="form-group">
+            <label for="calle">Calle</label>
+            <input type="text" class="form-control form-control-sm" id="calle" name="calle" aria-describedby="calle_help" value="<?php echo htmlentities($direccion['calle']);?>" required>
+            <small id="calle_help" class="form-text text-muted">Escribe el nombre de tu calle</small>
+          </div>
+
+          <div class="form-group">
+            <label for="numero">Numero</label>
+            <input type="int" class="form-control form-control-sm" id="numero" name="numero" aria-describedby="numero_help" value="<?php echo htmlentities($direccion['numero']);?>" required>
+            <small id="numero_help" class="form-text text-muted">Escribe el número de tu dirección</small>
+          </div>
+
+          <div class="form-group">
+            <label for="localidad">Localidad</label>
+            <input type="text" class="form-control form-control-sm" id="localidad" name="localidad" aria-describedby="localidad_help" value="<?php echo htmlentities($direccion['localidad']);?>" required>
+            <small id="localidad_help" class="form-text text-muted">Escribe el nombre de tu localidad</small>
+          </div>
+
+          <div class="form-group">
+            <label for="estado_id">Estado</label>
+            <select class="form-control form-control-sm" name="estado_id" id="estado_id" aria-describedby="estado_id_help" value="<?php echo htmlentities($direccion['estado_id']);?>" required>
+                <option value="" selected>Selecciona</option>
+            <?php
+                $sql = 'select id, estado from estados order by estado asc';
+                foreach ($conexion->query($sql) as $registro) {
+                echo <<<fin
+
+                <option value="{$registro['id']}">{$registro['estado']}</option>
+fin;
+                }
+                ?>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="municipio_id">Municipio</label>
+            <select class="form-control form-control-sm" name="municipio_id" id="municipio_id">
+                <option value="" selected>Selecciona un estado antes</option>
+                <?php
+                $sql = 'select id, municipio from municipios order by municipio asc';
+                foreach ($conexion->query($sql) as $registro) {
+                echo <<<fin
+
+                <option value="{$registro['id']}">{$registro['municipio']}</option>
+fin;
+                }
+                ?>
+            </select>
+        </div>
                     
                     
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
@@ -79,5 +109,14 @@ if (false == $direccion) {
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <script>
+  $(function(e) {
+      $('#estado_id').change(function (e) {
+        //console.log($(this).val())
+        $('#municipio_id').load('seleccionar_municipios.php?estado_id=' + $(this).val())
+      })
+  })
+  </script>
 </body>
 </html>
