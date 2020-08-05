@@ -63,7 +63,7 @@ if (false == $cliente) {
                         <input type="text" class="form-control form-control-sm" id="no_existencias" name="no_existencias" aria-describedby="no_existencias_help" value="<?php echo htmlentities($cliente['no_existencias']); ?>" required>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="float" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help" value="<?php echo htmlentities($cliente['precio']); ?>" required>
+                        <input type="number" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help" value="<?php echo htmlentities($cliente['precio']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="descripcion">Descripcion</label>
@@ -75,15 +75,15 @@ if (false == $cliente) {
                     </div>
                     <div class="form-group">
                         <label for="precio_oferta">Precio de Oferta</label>
-                        <input type="float" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
+                        <input type="number" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="foto">Foto</label>
-                        <input type="text" class="form-control form-control-sm" id="foto" name="foto" aria-describedby="foto_help" value="<?php echo htmlentities($cliente['foto']); ?>" required>
+                        <label for="precio_oferta">Precio de Oferta</label>
+                        <input type="image" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="foto_original">Foto original</label>
-                        <input type="text" class="form-control form-control-sm" id="foto_original" name="foto_original" aria-describedby="foto_original_help" value="<?php echo htmlentities($cliente['foto_original']); ?>" required>
+                        <label for="precio_oferta">Precio de Oferta</label>
+                        <input type="image" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                     <input type="hidden" name="id_producto" value="<?php echo $cliente['id_producto']; ?>">
