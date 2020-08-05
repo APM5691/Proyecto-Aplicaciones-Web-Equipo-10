@@ -12,7 +12,7 @@
       background: url(https://www.corazondejoyas.com/wp-content/uploads/2013/05/ComoVenderJoyasOro.jpg);
       position: fixed;
       width: 100%;
-      height: 400px;
+      height: 600px;
       /*same height as jumbotron */
       top: 15;
       left: 0;
@@ -20,7 +20,7 @@
     }
 
     .jumbotron {
-      height: 400px;
+      height: 600px;
       color: white;
       text-shadow: #444 0 1px 1px;
       background: transparent;
@@ -29,10 +29,10 @@
 </head>
 
 <body>
-  <div class="container-fluid">
+  
     <?php readfile('./menu.html'); ?>
-  </div>
- <br>
+  
+
   <div class="bg"></div>
   <div class="jumbotron">
     <h1>Joyeria Luminosete</h1>
