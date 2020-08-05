@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
 </head>
-
 <body>
 <?php readfile('./menu.html'); ?>
     <div class="container mt-4">
@@ -25,38 +24,54 @@
                         <small id="nombre_producto_help" class="form-text text-muted">Escribe el nombre del producto</small>
                     </div>
                     <div class="form-group">
-                        <label for="precio">Precio</label>
-                        <input type="number" class="form-control form-control-sm" id="precio" name="precio"
-                            aria-describedby="precio_help">
-                        <small id="precio_help" class="form-text text-muted">Escribe el precio del producto</small>
+                        <label for="tipo_de_joya_id">Tipo de Joya</label>
+                        <input type="text" class="form-control form-control-sm" id="tipo_de_joya_id" name="tipo_de_joya_id"
+                            aria-describedby="tipo_de_joya_id_help">
+                        <small id="tipo_de_joya_id_help" class="form-text text-muted">Escribe el tipo de joya</small>
                     </div>
                     <div class="form-group">
-                            <label for="descripcion">Kilates</label>
-                            <select class="form-control" id="descripcion" name="descripcion" >
-                                <option>Seleccionar</option>
-                                <option>6</option>
-                                <option>10</option>
-                                <option>12</option>
-                                <option>24</option>
-                                <option>32</option>
-                            </select>
-                            <small id="descripcion_help" class="form-text text-muted">Selecciona los Kilates</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="descripcion1">Estado</label>
-                            <select class="form-control" id="descripcion1" name="descripcion1">
-                                <option>Seleccionar</option>
-                                <option>Casi nuevo</option>
-                                <option>Casi usado</option>
-                                <option>Usado</option>
-                                <option>Semi Usado</option>
-                                <option>Desgastado</option>
-                                <option>Muy usado</option>
-                                <option style="height: 50%;" class="alert alert-danger">Roto</option>
-                            </select>
-                            <small id="descripcion1_help" class="form-text text-muted">Selecciona el estado en el que se encuentra</small>
-                        </div>
-                        <a href="materiales_formulario.php" class="btn btn-success float-right"> Siguiente</a>
+                        <label for="no_existencias">Numero de existencias</label>
+                        <input type="number" class="form-control form-control-sm" id="no_existencias" name="no_existencias"
+                            aria-describedby="no_existencias_help">
+                        <small id="no_existencias_help" class="form-text text-muted">Escribe el numero de existencias</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio">Precio</label>
+                        <input type="float" class="form-control form-control-sm" id="precio" name="precio"
+                            aria-describedby="precio_help">
+                        <small id="precio_help" class="form-text text-muted">Escribe el precio</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control form-control-sm" id="descripciom" name="descripcion"
+                            aria-describedby="descripcion_help">
+                        <small id="descripcion_help" class="form-text text-muted">Describe el producto</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="medida">Medida</label>
+                        <input type="text" class="form-control form-control-sm" id="medida" name="medida"
+                            aria-describedby="medida_help">
+                        <small id="medida_help" class="form-text text-muted">Escribe las medidas</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="precio_oferta">Precio de oferta</label>
+                        <input type="float" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta"
+                            aria-describedby="precio_oferta_help">
+                        <small id="precio_oferta_help" class="form-text text-muted">Describe el producto</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Foto</label>
+                        <input type="text" class="form-control form-control-sm" id="foto" name="foto"
+                            aria-describedby="foto_help">
+                        <small id="foto_help" class="form-text text-muted">Sube una foto del producto</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto_original">Foto original</label>
+                        <input type="text" class="form-control form-control-sm" id="foto_original" name="foto_original"
+                            aria-describedby="foto_original_help">
+                        <small id="foto_original_help" class="form-text text-muted">Sube una foto original</small>
+                    </div>
+                        <a href="productos_guardar.php" class="btn btn-success float-right"> Siguiente</a>
                 </form>
             </div>
         </div>

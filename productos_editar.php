@@ -56,34 +56,34 @@ if (false == $cliente) {
                     </div>
                     <div class="form-group">
                         <label for="tipo_de_joya_id">Tipo de joya</label>
-                        <input type="text" class="form-control form-control-sm" id="tipo_de_joya_id" name="tipo_de_joya_id" aria-describedby="tipo_de_joya_id_help" value="<?php echo htmlentities($cliente['nombre_cliente']); ?>" required>
+                        <input type="number" class="form-control form-control-sm" id="tipo_de_joya_id" name="tipo_de_joya_id" aria-describedby="tipo_de_joya_id_help" value="<?php echo htmlentities($cliente['tipo_de_joya_id']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="no_existencias">Existencias</label>
-                        <input type="text" class="form-control form-control-sm" id="no_existencias" name="no_existencias" aria-describedby="no_existencias_help" value="<?php echo htmlentities($cliente['primer_apellido']); ?>" required>
+                        <input type="text" class="form-control form-control-sm" id="no_existencias" name="no_existencias" aria-describedby="no_existencias_help" value="<?php echo htmlentities($cliente['no_existencias']); ?>" required>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="number" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_oficina_help" value="<?php echo htmlentities($cliente['telefono']); ?>" required>
+                        <input type="float" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help" value="<?php echo htmlentities($cliente['precio']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="descricion">Descripcion</label>
-                        <input type="text" class="form-control form-control-sm" id="descricion" name="descricion" aria-describedby="descricion_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control form-control-sm" id="descricio" name="descricio" aria-describedby="descricio_help" value="<?php echo htmlentities($cliente['descripcion']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="medida">Medida</label>
-                        <input type="text" class="form-control form-control-sm" id="medida" name="medida" aria-describedby="medida_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <input type="text" class="form-control form-control-sm" id="medida" name="medida" aria-describedby="medida_help" value="<?php echo htmlentities($cliente['medida']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="precio_oferta">Precio de Oferta</label>
-                        <input type="text" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <input type="float" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="oferta">Foto</label>
-                        <input type="text" class="form-control form-control-sm" id="oferta" name="oferta" aria-describedby="oferta_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <label for="foto">Foto</label>
+                        <input type="text" class="form-control form-control-sm" id="foto" name="foto" aria-describedby="foto_help" value="<?php echo htmlentities($cliente['foto']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="foto_original">Foto original</label>
-                        <input type="text" class="form-control form-control-sm" id="foto_original" name="foto_original" aria-describedby="foto_original_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <input type="text" class="form-control form-control-sm" id="foto_original" name="foto_original" aria-describedby="foto_original_help" value="<?php echo htmlentities($cliente['foto_original']); ?>" required>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                     <input type="hidden" name="id_producto" value="<?php echo $cliente['id_producto']; ?>">

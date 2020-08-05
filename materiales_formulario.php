@@ -19,19 +19,19 @@
             <div class="card-body">
                 <form action="productos_guardar.php" method="post">
                     <div class="form-group">
-                        <label for="id">Id del producto</label>
-                        <input type="" class="form-control form-control-sm" id="id" name="id"
+                        <label for="nombre">Nombre de Material</label>
+                        <input type="" class="form-control form-control-sm" id="nombre" name="nombre"
                             aria-describedby="id_help">
-                        <small id="id_help" class="form-text text-muted">Escribe el id</small>
+                        <small id="id_help" class="form-text text-muted">Escribe el nombre del material</small>
                     </div>
                     <div class="form-group">
-                        <label for="material_principal">Material</label>
-                        <select class="form-control" id="material_principal" name="material_principal">
+                        <label for="tipo_material">Tipo de Material</label>
+                        <select class="form-control" id="tipo_material" name="tipo_material">
                             <option>Seleccionar</option>
-                            <option>Oro</option>
+                            <option>Chapa de Oro</option>
+                            <option>Oro Amarillo</option>
+                            <option>oro Blanco</option>
                             <option>Plata</option>
-                            <option>Metal Bañado en Oro</option>
-                            <option>Metal Bañado en Plata</option>
                         </select>
                         <small id="material_principal_help" class="form-text text-muted">Selecciona el Material</small>
                     </div>
