@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="float" class="form-control form-control-sm" id="precio" name="precio"
+                        <input type="number" class="form-control form-control-sm" id="precio" name="precio"
                             aria-describedby="precio_help">
                         <small id="precio_help" class="form-text text-muted">Escribe el precio</small>
                     </div>
@@ -55,21 +55,21 @@
                     </div>
                     <div class="form-group">
                         <label for="precio_oferta">Precio de oferta</label>
-                        <input type="float" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta"
+                        <input type="number" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta"
                             aria-describedby="precio_oferta_help">
                         <small id="precio_oferta_help" class="form-text text-muted">Describe el producto</small>
                     </div>
                     <div class="form-group">
                         <label for="foto">Foto</label>
-                        <input type="text" class="form-control form-control-sm" id="foto" name="foto"
+                        <input type="image" class="form-control form-control-sm" id="foto" name="foto"
                             aria-describedby="foto_help">
-                        <small id="foto_help" class="form-text text-muted">Sube una foto del producto</small>
+                        <small id="foto_help" class="form-text text-muted">Inserta una foto</small>
                     </div>
                     <div class="form-group">
-                        <label for="foto_original">Foto original</label>
-                        <input type="text" class="form-control form-control-sm" id="foto_original" name="foto_original"
+                        <label for="foto_original">Foto Original</label>
+                        <input type="image" class="form-control form-control-sm" id="foto_original" name="foto_original"
                             aria-describedby="foto_original_help">
-                        <small id="foto_original_help" class="form-text text-muted">Sube una foto original</small>
+                        <small id="foto_original_help" class="form-text text-muted">Inserta una foto original</small>
                     </div>
                         <a href="productos_guardar.php" class="btn btn-success float-right"> Siguiente</a>
                 </form>

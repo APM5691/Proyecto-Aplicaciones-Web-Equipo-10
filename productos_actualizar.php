@@ -5,9 +5,9 @@ if (
      || !isset($_POST['no_existencias']) || empty($_POST['no_existencias'])
      || !isset($_POST['precio']) || empty($_POST['precio'])
      || !isset($_POST['descripcion']) || empty($_POST['descripcion'])
-     || !isset($_POST['medida']) || !in_array($_POST['medida'])
-     || !isset($_POST['precio_oferta']) || !in_array($_POST['precio_oferta'])
-     || !isset($_POST['foto']) || !in_array($_POST['foto'])
+     || !isset($_POST['medida']) || empty($_POST['medida'])
+     || !isset($_POST['precio_oferta']) || empty($_POST['precio_oferta'])
+     || !isset($_POST['foto']) || empty($_POST['foto'])
      || !isset($_POST['foto_original']) || empty($_POST['foto_original'])
 ) {
     header('Location: productos_formulario.php?info=Parámetros incorrectos');
