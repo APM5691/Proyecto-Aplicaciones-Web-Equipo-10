@@ -23,12 +23,27 @@
                             aria-describedby="nombre_producto_help">
                         <small id="nombre_producto_help" class="form-text text-muted">Escribe el nombre del producto</small>
                     </div>
+                    <?php
+                    require_once './conexion.php';
+                    $sql = 'select id_material, nombre, tipo_material from materiales order by id_material asc';
+                
+                    echo <<<fin
                     <div class="form-group">
-                        <label for="tipo_de_joya_id">Tipo de Joya</label>
-                        <input type="text" class="form-control form-control-sm" id="tipo_de_joya_id" name="tipo_de_joya_id"
-                            aria-describedby="tipo_de_joya_id_help">
-                        <small id="tipo_de_joya_id_help" class="form-text text-muted">Escribe el tipo de joya</small>
+                        <label for="tipo_material_id">Tipo Material</label>
+                        <select multiple class="form-control" id="tipo_material_id" name="tipo_material_id">
+fin;
+                    foreach ($conexion->query($sql) as $registro) {
+                    echo <<<fin
+                            <option>$registro[tipo_material]</option>
+fin;
+                    }
+                    echo <<<fin
+                    <small id="tipo_material_help" class="form-text text-muted">Eligue el tipo de material</small>
+                        </select>
                     </div>
+fin;
+                 
+                    ?>
                     <div class="form-group">
                         <label for="no_existencias">Numero de existencias</label>
                         <input type="number" class="form-control form-control-sm" id="no_existencias" name="no_existencias"
