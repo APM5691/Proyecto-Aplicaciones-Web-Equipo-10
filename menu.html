@@ -1,5 +1,71 @@
-<nav class="navbar navbar-expand-lg navbar-light" style="background-color: darkgrey;">
-    <img src="img/logo.jpg" class="img-fluid" alt="Responsive image">
+<style>
+    .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 14px;
+}
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 0px;
+  bottom: 0px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.oscuro{ 
+    background-color: #1f1f1f; 
+    color: #f1eded; 
+}
+</style>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+    <img src="img/Logo diamante.png" class="img-fluid" alt="Responsive image">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -29,15 +95,30 @@
                     <a class="dropdown-item" href="Productos.php"><i class="fa fa-cart-plus"></i> Productos</a>
                     <a class="dropdown-item" href="clientes.php"><i class="fa fa-user-circle"></i> Clientes</a>
                     <a class="dropdown-item" href="tipo_de_joya.php"><i class="fa fa-ring"></i> Tipo de Joya</a>
+                    
+
                 </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-eye"></i> Ver</a>
+                
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="sql.php"><i class="fa fa-database"></i> Administracion</a>
             </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
+        <button type="button" class="btn btn-dark" onclick="cambiarModo()">Oscuro / Claro</button>
+        
+        
             <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
         </form>
     </div>
 </nav>
+<script>
+    function cambiarModo() { 
+    var cuerpoweb = document.body; 
+    cuerpoweb.classList.toggle("oscuro"); 
+}
+</script>
