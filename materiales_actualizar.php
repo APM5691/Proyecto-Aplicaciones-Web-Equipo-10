@@ -1,7 +1,7 @@
 <?php
 if (
     !isset($_POST['nombre']) || empty($_POST['nombre'])
-    || !isset($_POST['tipo_material']) || !in_array($_POST['tipo_material'], ['chapa_de_oro', 'Oro_amarillo', 'Oro _blanco', 'plata'])
+    || !isset($_POST['tipo_material']) || empty($_POST['tipo_material'])
 ) {
     header('Location: materiales_editar.php?info=Parámetros incorrectos');
     exit;

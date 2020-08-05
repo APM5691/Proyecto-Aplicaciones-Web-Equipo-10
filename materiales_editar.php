@@ -49,24 +49,12 @@ if (false == $materiales) {
                             aria-describedby="id_help">
                     </div>
                     <div class="form-group">
-                        <label for="tipo_material">Tipo de Joya</label><br>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="tipo_material" id="tipo_material1" value="chapa_de_oro" <?php echo 'chapa_de_oro' == $materiales['tipo_material'] ? 'checked' : ''; ?>>
-                            <label class="form-check-label" for="tipo_material1">Chapa de Oro</label> 
-                            &nbsp;
-                            <input class="form-check-input" type="radio" name="tipo_material" id="tipo_material2" value="Oro_amarillo" <?php echo 'Oro_amarillo' == $materiales['tipo_material'] ? 'checked' : ''; ?>>
-                            <label class="form-check-label" for="tipo_material2">Oro Amarillo</label>
-                            &nbsp;
-                            <input class="form-check-input" type="radio" name="tipo_material" id="tipo_material3" value="Oro_blanco" <?php echo 'Oro_blanco' == $materiales['tipo_material'] ? 'checked' : ''; ?>>
-                            <label class="form-check-label" for="tipo_material3">Oro Blanco</label>
-                            &nbsp;
-                            <input class="form-check-input" type="radio" name="tipo_material" id="tipo_material4" value="plata" <?php echo 'plata' == $materiales['tipo_material'] ? 'checked' : ''; ?>>
-                            <label class="form-check-label" for="tipo_material4">Plata</label>
-                        </div>
+                    <label for="tipo_material">Tipo de Material de Material</label>
+                        <input type="text" class="form-control form-control-sm" id="tipo_material" name="tipo_material" aria-describedby="id_help">
                     </div>
-                        <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
+                        <button class="btn btn-warning btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                     <input type="hidden" name="id_material" value="<?php echo $materiales['id_material']; ?>">
-                    </form>
+                </form>
             </div>
         </div>
     </div>

@@ -20,13 +20,12 @@
                 <form action="materiales_guardar.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre de Material</label>
-                        <input type="" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="id_help">
+                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="id_help">
                         <small id="id_help" class="form-text text-muted">Escribe el nombre del material</small>
                     </div>
                     <div class="form-group">
-
-                    <label for="nombre">Tipo de Material de Material</label>
-                        <input type="" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="id_help">
+                    <label for="tipo_material">Tipo de Material de Material</label>
+                        <input type="text" class="form-control form-control-sm" id="tipo_material" name="tipo_material" aria-describedby="id_help">
 
                         <small id="material_principal_help" class="form-text text-muted">Selecciona el Material</small>
                     </div>
