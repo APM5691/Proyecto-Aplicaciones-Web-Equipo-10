@@ -10,15 +10,15 @@ select
     , nombre
     , tipo_material
 from
-    material
+    materiales
 where
     id_material = :id
 fin;
 $sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
 $sentencia->execute([':id' => $_REQUEST['id']]);
-$cliente = $sentencia->fetch(PDO::FETCH_ASSOC);
-if (false == $cliente) {
-    header('Location: materiales.php?info=No se encontró el cliente');
+$materiales = $sentencia->fetch(PDO::FETCH_ASSOC);
+if (false == $materiales) {
+    header('Location: materiales.php?info=No se encontró el Material');
     exit;
 }
 ?>
@@ -38,22 +38,22 @@ if (false == $cliente) {
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
-                <a class="btn btn-light btn-sm float-right" href="clientes.php"><i class="fa fa-arrow-circle-left"></i> regresar</a>
+                <a class="btn btn-light btn-sm float-right" href="materiales.php"><i class="fa fa-arrow-circle-left"></i> regresar</a>
                 Materiales
             </div>
             <div class="card-body">
                 <form action="materiales_actualizar.php" method="post">
                     <div class="form-group">
-                        <label for="nombre">Nombre del Material</label>
-                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="nombre_help" value="<?php echo htmlentities($cliente['nombre_cliente']); ?>" required>
+                    <label for="nombre">Nombre de Material</label>
+                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre"
+                            aria-describedby="id_help">
                     </div>
                     <div class="form-group">
-                        <label for="tipo_material">Tipo de Material</label>
-                        <input type="text" class="form-control form-control-sm" id="tipo_material" name="tipo_material" aria-describedby="tipo_material_help" value="<?php echo htmlentities($cliente['primer_apellido']); ?>" required>
+                    <label for="tipo_material">Tipo de Material de Material</label>
+                        <input type="text" class="form-control form-control-sm" id="tipo_material" name="tipo_material" aria-describedby="id_help">
                     </div>
-                    </div>
-                    <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
-                    <input type="hidden" name="id_material" value="<?php echo $cliente['id_material']; ?>">
+                        <button class="btn btn-warning btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
+                    <input type="hidden" name="id_material" value="<?php echo $materiales['id_material']; ?>">
                 </form>
             </div>
         </div>

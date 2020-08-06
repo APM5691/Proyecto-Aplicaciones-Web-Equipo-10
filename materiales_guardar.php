@@ -10,7 +10,7 @@ if (
 
 require_once './conexion.php';
 $sql = <<<fin
-insert into material set
+insert into materiales set
     nombre = :nombre
     , tipo_material = :tipo_material
 fin;
@@ -18,7 +18,7 @@ fin;
 $sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
 $sentencia->execute([
     ':nombre' => $_POST['nombre']
-    , ':tipo_material' => $_POST['tipo_material']
+    ,':tipo_material' => $_POST['tipo_material']
 ]);
 header('Location: materiales.php?info=Material creado exitosamente');
 ?>

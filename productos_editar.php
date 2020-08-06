@@ -54,36 +54,53 @@ if (false == $cliente) {
                         <label for="nombre">Nombre del Producto</label>
                         <input type="text" class="form-control form-control-sm" id="nombre_producto" name="nombre_producto" aria-describedby="nombre_producto_help" value="<?php echo htmlentities($cliente['nombre_cliente']); ?>" required>
                     </div>
+                    <?php
+                    require_once './conexion.php';
+                    $sql = 'select id_material, nombre, tipo_material from materiales order by id_material asc';
+                
+                    echo <<<fin
                     <div class="form-group">
-                        <label for="tipo_de_joya_id">Tipo de joya</label>
-                        <input type="text" class="form-control form-control-sm" id="tipo_de_joya_id" name="tipo_de_joya_id" aria-describedby="tipo_de_joya_id_help" value="<?php echo htmlentities($cliente['nombre_cliente']); ?>" required>
+                        <label for="tipo_material_id">Tipo Material</label>
+                        <select multiple class="form-control" id="tipo_material_id" name="tipo_material_id">
+fin;
+                    foreach ($conexion->query($sql) as $registro) {
+                    echo <<<fin
+                            <option>$registro[tipo_material]</option>
+fin;
+                    }
+                    echo <<<fin
+                    <small id="tipo_material_help" class="form-text text-muted">Eligue el tipo de material</small>
+                        </select>
                     </div>
+fin;
+                 
+                    ?>
                     <div class="form-group">
                         <label for="no_existencias">Existencias</label>
-                        <input type="text" class="form-control form-control-sm" id="no_existencias" name="no_existencias" aria-describedby="no_existencias_help" value="<?php echo htmlentities($cliente['primer_apellido']); ?>" required>
+                        <input type="text" class="form-control form-control-sm" id="no_existencias" name="no_existencias" aria-describedby="no_existencias_help" value="<?php echo htmlentities($cliente['no_existencias']); ?>" required>
                     <div class="form-group">
                         <label for="precio">Precio</label>
-                        <input type="number" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_oficina_help" value="<?php echo htmlentities($cliente['telefono']); ?>" required>
+                        <input type="number" class="form-control form-control-sm" id="precio" name="precio" aria-describedby="precio_help" value="<?php echo htmlentities($cliente['precio']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="descricion">Descripcion</label>
-                        <input type="text" class="form-control form-control-sm" id="descricion" name="descricion" aria-describedby="descricion_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" class="form-control form-control-sm" id="descricio" name="descricio" aria-describedby="descricio_help" value="<?php echo htmlentities($cliente['descripcion']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="medida">Medida</label>
-                        <input type="text" class="form-control form-control-sm" id="medida" name="medida" aria-describedby="medida_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <input type="text" class="form-control form-control-sm" id="medida" name="medida" aria-describedby="medida_help" value="<?php echo htmlentities($cliente['medida']); ?>" required>
                     </div>
                     <div class="form-group">
                         <label for="precio_oferta">Precio de Oferta</label>
-                        <input type="text" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <input type="number" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="oferta">Foto</label>
-                        <input type="text" class="form-control form-control-sm" id="oferta" name="oferta" aria-describedby="oferta_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <label for="precio_oferta">Precio de Oferta</label>
+                        <input type="image" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
                     </div>
                     <div class="form-group">
-                        <label for="foto_original">Foto original</label>
-                        <input type="text" class="form-control form-control-sm" id="foto_original" name="foto_original" aria-describedby="foto_original_help" value="<?php echo htmlentities($cliente['correo_electronico']); ?>" required>
+                        <label for="precio_oferta">Precio de Oferta</label>
+                        <input type="image" class="form-control form-control-sm" id="precio_oferta" name="precio_oferta" aria-describedby="precio_oferta_help" value="<?php echo htmlentities($cliente['precio_oferta']); ?>" required>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
                     <input type="hidden" name="id_producto" value="<?php echo $cliente['id_producto']; ?>">

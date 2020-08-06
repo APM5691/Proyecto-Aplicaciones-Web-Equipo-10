@@ -3,7 +3,7 @@ if (
     !isset($_POST['nombre']) || empty($_POST['nombre'])
     || !isset($_POST['tipo_material']) || empty($_POST['tipo_material'])
 ) {
-    header('Location: materiales_formulario.php?info=Parámetros incorrectos');
+    header('Location: materiales_editar.php?info=Parámetros incorrectos');
     exit;
 }
 

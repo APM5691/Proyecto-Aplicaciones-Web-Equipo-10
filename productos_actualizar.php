@@ -4,10 +4,10 @@ if (
     || !isset($_POST['tipo_de_joya_id']) || empty($_POST['tipo_de_joya_id'])
      || !isset($_POST['no_existencias']) || empty($_POST['no_existencias'])
      || !isset($_POST['precio']) || empty($_POST['precio'])
-     || !isset($_POST['descricion']) || empty($_POST['descricion'])
-     || !isset($_POST['medida']) || !in_array($_POST['medida'])
-     || !isset($_POST['precio_oferta']) || !in_array($_POST['precio_oferta'])
-     || !isset($_POST['foto']) || !in_array($_POST['foto'])
+     || !isset($_POST['descripcion']) || empty($_POST['descripcion'])
+     || !isset($_POST['medida']) || empty($_POST['medida'])
+     || !isset($_POST['precio_oferta']) || empty($_POST['precio_oferta'])
+     || !isset($_POST['foto']) || empty($_POST['foto'])
      || !isset($_POST['foto_original']) || empty($_POST['foto_original'])
 ) {
     header('Location: productos_formulario.php?info=Parámetros incorrectos');
@@ -21,7 +21,7 @@ update producto set
     , tipo_de_joya_id = :tipo_de_joya_id
     , no_existencias = :no_existencias
     , precio = :precio
-    , descricion = :descricion
+    , descripcion = :descripcion
     , medida = :medida
     , precio_oferta = :precio_oferta
     , foto = :foto
@@ -35,7 +35,7 @@ $sentencia->execute([
     , ':tipo_de_joya_id' => $_POST['tipo_de_joya_id']
     , ':no_existencias' => $_POST['no_existencias']
     , ':precio' => $_POST['precio']
-    , ':descricion' => $_POST['descricion']
+    , ':descripcion' => $_POST['descripcion']
     , ':medida' => $_POST['medida']
     , ':precio_oferta' => $_POST['precio_oferta']
     , ':foto' => $_POST['foto']

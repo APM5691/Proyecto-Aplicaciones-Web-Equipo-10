@@ -10,32 +10,26 @@
 </head>
 
 <body>
-        <?php readfile('./menu.html'); ?>
+    <?php readfile('./menu.html'); ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
                 Formulario Para Materiales
             </div>
             <div class="card-body">
-                <form action="productos_guardar.php" method="post">
+                <form action="materiales_guardar.php" method="post">
                     <div class="form-group">
-                        <label for="id">Id del producto</label>
-                        <input type="" class="form-control form-control-sm" id="id" name="id"
-                            aria-describedby="id_help">
-                        <small id="id_help" class="form-text text-muted">Escribe el id</small>
+                        <label for="nombre">Nombre de Material</label>
+                        <input type="text" class="form-control form-control-sm" id="nombre" name="nombre" aria-describedby="id_help">
+                        <small id="id_help" class="form-text text-muted">Escribe el nombre del material</small>
                     </div>
                     <div class="form-group">
-                        <label for="material_principal">Material</label>
-                        <select class="form-control" id="material_principal" name="material_principal">
-                            <option>Seleccionar</option>
-                            <option>Oro</option>
-                            <option>Plata</option>
-                            <option>Metal Bañado en Oro</option>
-                            <option>Metal Bañado en Plata</option>
-                        </select>
+                    <label for="tipo_material">Tipo de Material de Material</label>
+                        <input type="text" class="form-control form-control-sm" id="tipo_material" name="tipo_material" aria-describedby="id_help">
+
                         <small id="material_principal_help" class="form-text text-muted">Selecciona el Material</small>
                     </div>
-                    <button class="btn btn-success btn-sm" type="submit"> <i class="fa fa-save"></i> Guardar</button>
+                    <button class="btn btn-warning " type="submit"> <i class="fa fa-save"></i> Guardar</button>
                 </form>
             </div>
         </div>
