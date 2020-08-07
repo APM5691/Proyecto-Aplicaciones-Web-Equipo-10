@@ -109,6 +109,38 @@
       </div>
     </div>
   </div>
+  <div class="modal" tabindex="-1" role="dialog" id="dsm33-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">ATENCIÓN</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><?php echo isset($_REQUEST['error']) ? htmlentities($_REQUEST['error']) : '&nbsp;';?></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+            </div>
+            </div>
+        </div>
+    </div>
+        
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <?php
+  if (isset($_REQUEST['error'])) {
+    echo <<<fin
+<script>
+    $(function(e) {
+        $('#dsm33-modal').modal();
+    })
+</script>
+fin;
+  }
+  ?>
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>

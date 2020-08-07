@@ -13,7 +13,7 @@ if (
       || !isset($_POST['password']) || empty($_POST['password']) || strlen($_POST['password']) < 8
       || $_POST['password'] =! $_POST['password2']
 ) {
-    header('Location: clientes_formularios.php?info=Parámetros incorrectos');
+    header('Location: clientes_formularios.php?error=Parámetros incorrectos');
 
     exit;
 }

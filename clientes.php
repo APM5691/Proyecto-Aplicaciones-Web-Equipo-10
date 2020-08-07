@@ -1,4 +1,7 @@
 <?php
+
+require_once'./checar_sesion.php';
+
 require_once './conexion.php';
 ?>
 <!DOCTYPE html>
