@@ -49,20 +49,20 @@ fin;
                 </div>
                     <div class="card" style="width: 13rem;">
                         <h2 class="text-xl-center" class="card-title"><?php echo htmlentities($producto['nombre_producto']);?></h2>
-                            <p class="card-text">
-                                <h2>
+                            <p class="card-text" class="text-enter">
+                                <h2 class="text-center">
                                 Precio de Oferta: $ <?php echo htmlentities($producto['precio_oferta']);?> MXN
                                 </h2>
                             </p>
-                            <p class="card-text" >
-                            <h4>Precio: $<?php echo htmlentities($producto['precio']);?></h4>
+                            <p class="card-text" class="text-center">
+                            <h4 class="text-center">Precio: $<?php echo htmlentities($producto['precio']);?></h4>
                                 
                             </p>
                             <p class="card-text">
-                                <h4>Descripción: <br> <?php echo htmlentities($producto['descricio']);?></h4>
+                                <h4 class="text-center">Descripción: <br> <?php echo htmlentities($producto['descricio']);?></h4>
                             </p>
-                            <p class="card-text">
-                            <h4>Medida disponible: <?php echo htmlentities($producto['medida']);?></h4>
+                            <p class="card-text" class="text-center">
+                            <h4 class="text-center">Medida disponible: <?php echo htmlentities($producto['medida']);?></h4>
                             </p>
                     </div>
         </div>
