@@ -9,7 +9,7 @@ if (
       
     
 ) {
-    header('Location: index.php?error=Escribe tu correo y contraseña');
+    header('Location: index.php?error=Escribe tu correo y password');
     exit;
 }
 
@@ -29,7 +29,7 @@ if($usuario==false){
 
 // ¿contraseña coincide?
 if (!password_verify($_POST['password'], $usuario['password'])) {
-    header('Location: index.php?error=Usuario o contraseña incorrectos');
+    header('Location: index.php?error=Usuario o password incorrectos');
     exit;
 }
 session_start();
