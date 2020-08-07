@@ -30,10 +30,10 @@
                         <div class="card-body">
                             <h6 class="card-title"><?php echo $row[1]; ?></h6>
                             <p class="card-text">
-                                Precio $:<?php echo $row[2]; ?> MXN
+                                Precio: $<?php echo $row[2]; ?> MXN
                             </p>
-                            <a href="detalle_producto.php?:id_producto" class="btn btn-primary">Ver detalles</a>
-                        
+                        <a class="btn btn-primary"  href="detalle_producto.php?id_producto=<?php echo $row[0];?>" >Ver detalles</a>
+
                         </div>
                     </div>
                 </div>
