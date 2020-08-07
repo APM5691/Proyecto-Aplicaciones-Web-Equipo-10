@@ -18,21 +18,31 @@
       </div>
       <div class="card-body">
         <form action="inicio_sesion.php" method="post">
-          
+        <!-- <?php
+          if (isset($_REQUEST['error']) && !empty($_REQUEST['error'])) {
+            $_REQUEST['error'] = htmlentities($_REQUEST['error']);
+            echo <<<fin
+                <div class="alert alert-warning" role="alert">
+                    {$_REQUEST['error']}
+                </div>
+fin;
+          }
+          ?> -->
+
           <div class="form-group">
             <label for="correo_electronico">Direccion de E-mail </label>
-            <input type="text" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_electronico" required/>
+            <input type="text" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_electronico" required />
             <small id="email_help" class="form-text text-muted">Escribe tu Email</small>
             <div class="invalid-feedback"> Please provide a valid city.</div>
           </div>
           <div class="form-group">
             <label for="password">Contraseña</label>
-            <input type="password" class="form-control form-control-sm" id="password" name="password" aria-describedby="password" required/>
+            <input type="password" class="form-control form-control-sm" id="password" name="password" aria-describedby="password" required />
             <small id="password_help" class="form-text text-muted">Escribe tu Contraseña</small>
           </div>
 
           <button class="btn btn-success" type="submit">
-             Iniciar Sesion
+            Iniciar Sesion
           </button>
           <a class="btn btn-dark" href="clientes_formularios.php" role="button">Registrarse</a>
         </form>
@@ -40,24 +50,24 @@
     </div>
   </div>
   <div class="modal" tabindex="-1" role="dialog" id="dsm33-modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">ATENCIÓN</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p><?php echo isset($_REQUEST['error']) ? htmlentities($_REQUEST['error']) : '&nbsp;';?></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
-            </div>
-            </div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ATENCIÓN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <p><?php echo isset($_REQUEST['error']) ? htmlentities($_REQUEST['error']) : ''; ?></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
     </div>
-        
+  </div>
+
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <?php
@@ -71,7 +81,7 @@
 fin;
   }
   ?>
-  
+
 </body>
 
 </html>

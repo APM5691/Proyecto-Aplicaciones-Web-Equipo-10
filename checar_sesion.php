@@ -2,6 +2,6 @@
 session_start();
 if(!isset($_SESSION['id'])||empty($_SESSION['id']))
   {
-    header('Location: index.php');
+    header('Location: index.php?error=inicia sesion primero');
 }
 ?>
