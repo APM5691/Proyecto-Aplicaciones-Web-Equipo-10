@@ -7,11 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
+    <style>
+    .bg {
+      background: url(https://p4.wallpaperbetter.com/wallpaper/478/514/546/diamonds-glow-brilliant-sparkle-wallpaper-preview.jpg);
+      position: fixed;
+      width: 100%;
+      height: 600px;
+      /*same height as jumbotron */
+      top: 15;
+      left: 0;4
+      z-index: -1;
+    }
+
+    .jumbotron {
+      height: 600px;
+      color: white;
+      text-shadow: #444 0 1px 1px;
+      background: transparent;
+    }
+  </style>
 </head>
 <body>
 
 <?php readfile('./menu.html'); ?>
-    <div class="container mt-3">
+
+<div class="bg"></div>
+  <div class="jumbotron">
+    <h1>Joyeria Luminosete</h1>
+    <p class="lead">Eliga algun producto</p>
+  </div>
+  </div>
+  
+  <div class="container mt-3">
         <div class="row">
 
             <?php
@@ -44,6 +71,18 @@
     </div>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    var jumboHeight = $('.jumbotron').outerHeight();
+
+    function parallax() {
+      var scrolled = $(window).scrollTop();
+      $('.bg').css('height', (jumboHeight - scrolled) + 'px');
+    }
+
+    $(window).scroll(function(e) {
+      parallax();
+    });
+  </script>
 </body>
 
 </html> 
