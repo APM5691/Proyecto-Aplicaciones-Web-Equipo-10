@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <?php readfile('./menu.html'); ?>
+  <?php require_once('./menu.php'); ?>
   <div class="container mt-4">
     <div class="card">
       <div class="card-header">
@@ -18,16 +18,6 @@
       </div>
       <div class="card-body">
         <form action="inicio_sesion.php" method="post">
-        <!-- <?php
-          if (isset($_REQUEST['error']) && !empty($_REQUEST['error'])) {
-            $_REQUEST['error'] = htmlentities($_REQUEST['error']);
-            echo <<<fin
-                <div class="alert alert-warning" role="alert">
-                    {$_REQUEST['error']}
-                </div>
-fin;
-          }
-          ?> -->
 
           <div class="form-group">
             <label for="correo_electronico">Direccion de E-mail </label>

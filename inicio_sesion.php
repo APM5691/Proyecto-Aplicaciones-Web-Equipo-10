@@ -33,9 +33,9 @@ if (!password_verify($_POST['password'], $usuario['password'])) {
     exit;
 }
 session_start();
-$_SESSION['id']=$usuario;
-$_SESSION['nombre']=$usuario;
-$_SESSION['perfil']=$usuario;
+$_SESSION['id']=$usuario['id_cliente'];
+$_SESSION['nombre']=$usuario['nombre_cliente'];
+$_SESSION['perfil']=$usuario['perfil'];
 
 header('Location: inicio.php?info=Bienvenido '.$usuario['nombre_cliente']);
 ?>

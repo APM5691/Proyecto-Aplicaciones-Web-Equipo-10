@@ -17,7 +17,7 @@ require_once './conexion.php';
 
 <body>
 
-        <?php readfile('./menu.html'); ?>
+        <?php require_once('./menu.php'); ?>
 
     <div class="container mt-4">
         <div class="card">

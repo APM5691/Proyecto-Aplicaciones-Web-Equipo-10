@@ -1,4 +1,10 @@
-
+<?php
+require_once './checar_sesion.php';
+if ($_SESSION['perfil'] != 'Administrador') {
+    header('index.php?error=NO TIENES PERMITIDO PARA ENTRAR A ESTA PAGINA');
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -11,7 +17,7 @@
 </head>
 
 <body>
-    <?php readfile('./menu.html'); ?>
+    <?php require_once('./menu.php'); ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">

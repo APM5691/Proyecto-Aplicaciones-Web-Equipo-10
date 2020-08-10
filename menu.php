@@ -1,3 +1,4 @@
+
 <style>
   .switch {
     position: relative;
@@ -101,17 +102,26 @@
       <li class="nav-item">
         <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true"><i class="fa fa-eye"></i> Ver</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="sql.php"><i class="fa fa-database"></i> Administracion</a>
-      </li>
+
+      <?php
+      if(isset($_SESSION['id']) && is_numeric($_SESSION['id']) && 'Administrador' == $_SESSION['perfil']){
+   echo '<li class="nav-item">
+   <a class="nav-link active" href="sql.php"><i class="fa fa-database"></i> Administracion</a>
+ </li>';
+      }
+      ?>
+
     </ul>
+
     <form class="form-inline my-2 my-lg-0">
-      <!-- <button type="button" class="btn btn-dark" onclick="cambiarModo()">
-        Oscuro / Claro
-      </button> -->
-      
-        <a class="nav-item nav-link" href="cerrar_sesion.php"><i class="fa fa-sign-out-alt"></i> Cerrar sesion</a>
-      
+
+      <?php
+      // printf($_SESSION['id']);
+      if(isset($_SESSION['id']) && is_numeric($_SESSION['id'])){
+   echo '<a class="nav-item nav-link" href="cerrar_sesion.php"><i class="fa fa-sign-out-alt"></i> Cerrar sesion</a>';
+      }
+      ?>
+
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" />
       <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
         Buscar
@@ -119,9 +129,3 @@
     </form>
   </div>
 </nav>
-<script>
-  function cambiarModo() {
-    var cuerpoweb = document.body;
-    cuerpoweb.classList.toggle("oscuro");
-  }
-</script>
