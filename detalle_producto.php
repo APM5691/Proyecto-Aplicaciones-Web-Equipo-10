@@ -21,7 +21,7 @@ select
     ,nombre_producto
     ,no_existencias
     ,precio
-    ,descricio
+    ,descripcion
     ,medida
     ,precio_oferta
     ,foto_original
@@ -39,6 +39,7 @@ fin;
 }
 ?>
 <?php readfile('./menu.html'); ?>
+
 
   <div class="container mt-4">
 
@@ -59,11 +60,14 @@ fin;
                                 
                             </p>
                             <p class="card-text">
-                                <h4 class="text-center">Descripción: <br> <?php echo htmlentities($producto['descricio']);?></h4>
+                                <h4 class="text-center">Descripción: <br> <?php echo htmlentities($producto['descripcion']);?></h4>
                             </p>
                             <p class="card-text" class="text-center">
                             <h4 class="text-center">Medida disponible: <?php echo htmlentities($producto['medida']);?></h4>
                             </p>
+                            <button type="button-center" class="btn btn-primary" href="detalle_producto.php?id_producto=<?php echo $row[0];?>">
+                            <h2>COMPRAR</h2>
+                            </button>
                     </div>
         </div>
   
