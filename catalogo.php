@@ -29,7 +29,7 @@
 </head>
 <body>
 
-<?php readfile('./menu.html'); ?>
+<?php readfile('./menu.php'); ?>
 
 <div class="bg"></div>
   <div class="jumbotron">
