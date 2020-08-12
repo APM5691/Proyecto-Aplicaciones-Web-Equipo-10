@@ -108,7 +108,7 @@ fin;
                                 <a  href="calcular_subtotal.php?id_producto=<?php echo ($producto['id_producto']);?>"></a>
                                 <a class="btn btn-primary" href="calcular_subtotal.php?id_producto=<?php echo htmlentities($producto['id_producto']);?>" role="button">Calcular el precio</a>
                                 </form> -->
-                            <br>
+                            <!-- <br>
                             <a  href="calcular_subtotal.php?id_producto=<?php echo ($producto['id_producto']);?>"></a>
                                 <a class="btn btn-primary" href="comprar.php?id_producto=<?php echo htmlentities($producto['id_producto']);?>" role="button">
                                 <h2>COMPRAR       <i class="fas fa-check"></i></i></h2>
@@ -118,7 +118,7 @@ fin;
                                 <a class="btn btn-secondary" href="carrito_compra.php?id_producto=<?php echo htmlentities($producto['id_producto']);?>" role="button" >
                                 Agregar al carrito      <i class="fas fa-shopping-cart"></i> 
                                  </a>
-                            </div>
+                            </div> -->
 
                             
                             
