@@ -15,7 +15,7 @@
       height: 600px;
       /*same height as jumbotron */
       top: 15;
-      left: 0;4
+      left: 0;
       z-index: -1;
     }
 
@@ -29,11 +29,11 @@
 </head>
 <body>
 
-<?php readfile('./menu.php'); ?>
+<?php require_once('./menu.php'); ?>
 
 <div class="bg"></div>
   <div class="jumbotron">
-    <h1>Joyeria Luminosete</h1>
+    <h1>Joyeria Luminosite</h1>
     <p class="lead">Eliga algun producto</p>
   </div>
   </div>
@@ -60,7 +60,7 @@
                                 Precio: $<?php echo $row[2]; ?> MXN
                             </p>
                         <a class="btn btn-primary"  href="detalle_producto.php?id_producto=<?php echo $row[0];?>" >Ver detalles</a>
-
+                        <p><a class="btn btn-dark" href="carrito_compras.php?id_producto=<?php echo $row[0];?>" >Agregar al carrito</a></p>
                         </div>
                     </div>
                 </div>
