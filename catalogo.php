@@ -31,12 +31,53 @@
 
 <?php require_once('./menu.php'); ?>
 
-<div class="bg"></div>
-  <div class="jumbotron">
-    <h1>Joyeria Luminosite</h1>
-    <p class="lead">Eliga algun producto</p>
-  </div>
-  </div>
+
+        <div class="container mt-4">
+          <h1 class="text-center">Joyeria luminose
+          </h1>
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <a> <img src="img/joyas4.jpg" class="rounded mx-auto d-block">
+                <div class="carousel-caption d-none d-md-block " alt="Responsive image">
+                  <h5> Tenemos lo que necesitas</h5>
+                  <p>Puedes encontrar anillos</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+              <a> <img src="img/joyas2.jpg" class="rounded mx-auto d-block">
+                <div class="carousel-caption d-none d-md-block text-dark">
+                  <h5>Tenemos lo que necesitas</h5>
+                  <p>Puedes encontrar collares</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <a> <img src="img/joyas3.jpg" class="rounded mx-auto d-block">
+                <div class="carousel-caption d-none d-md-block ">
+                  <h5>Tenemos lo que necesitas</h5>
+                  <p>Puedes encontrar relojes</p>
+                </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+     
   
   <div class="container mt-3">
         <div class="row">
