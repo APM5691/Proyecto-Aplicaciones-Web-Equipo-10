@@ -8,11 +8,20 @@ if (
    || !isset($_POST['medida']) || empty($_POST['medida'])
    || !isset($_POST['precio_oferta']) || empty($_POST['precio_oferta'])
    || !isset($_POST['foto']) || empty($_POST['foto'])
-   || !isset($_POST['foto_original']) || empty($_POST['foto_original'])
 ){header('Location: productos_formulario.php?info=Parámetros incorrectos');
     exit;
 }
 require_once './conexion.php';
+$nombreimg = $_FILES['imagen']['name'];
+$archivo = $_FILES['imagen']['tmp_name'];
+$ruta ="img";
+
+$ruta=$ruta."/"."productos"."/".$nombreimg;
+
+move_uploaded_file($archivo,$ruta);
+
+$_POST['productos']=$ruta;
+                           
 $sql = <<<fin
 insert into producto set
      nombre_producto = :nombre_producto
@@ -23,7 +32,7 @@ insert into producto set
     , medida = :medida
     , precio_oferta = :precio_oferta
     , foto = :foto
-    , foto_original = :foto_original
+    
 fin;
 $sentencia = $conexion->prepare($sql, [PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY]);
 $sentencia->execute([
@@ -35,7 +44,10 @@ $sentencia->execute([
     , ':medida' => $_POST['medida']
     , ':precio_oferta' => $_POST['precio_oferta']
     , ':foto' => $_POST['foto']
-    , ':foto_original' => $_POST['foto_original']
+    
 ]);
 header('Location: Productos.php?info=Producto creado exitosamente');
 ?>
+
+                            
+                        

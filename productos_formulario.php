@@ -74,20 +74,10 @@ fin;
                             aria-describedby="precio_oferta_help">
                         <small id="precio_oferta_help" class="form-text text-muted">Describe el producto</small>
                     </div>
-                    <form>
-                        <div class="form-group">
-                            <label for="foto">Agrega una foto</label>
-                            <input type="file" class="form-control-file" id="foto"name="foto"
-                            aria-describedby="foto_help">
-                        </div>
-                    </form>
-                    <form>
-                        <div class="form-group">
-                            <label for="foto_original">Agrega una foto original</label>
-                            <input type="file" class="form-control-file" id="foto_original"name="foto_original"
-                            aria-describedby="foto_original_help">
-                        </div>
-                    </form>
+                    <div class="form-group">
+                    <input type='file' name='imagen' accept="image/*">
+                    <br>
+                    </div>
                         <a href="productos_guardar.php" class="btn btn-success float-right"> Siguiente</a>
                 </form>
             </div>
