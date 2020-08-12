@@ -60,7 +60,7 @@
                                 Precio: $<?php echo $row[2]; ?> MXN
                             </p>
                         <a class="btn btn-primary"  href="detalle_producto.php?id_producto=<?php echo $row[0];?>" >Ver detalles</a>
-                        <p><a class="btn btn-dark" href="carrito_compras.php?id_producto=<?php echo $row[0];?>" >Agregar al carrito</a></p>
+                        <p><a class="btn btn-dark" href="carrito_compras.php?id_compra=<?php echo $row[0];?>" >Agregar al carrito</a></p>
                         </div>
                     </div>
                 </div>

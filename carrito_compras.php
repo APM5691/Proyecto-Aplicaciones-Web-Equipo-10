@@ -11,7 +11,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    
+    <style>
+    .bg {
+      background: url(https://p4.wallpaperbetter.com/wallpaper/478/514/546/diamonds-glow-brilliant-sparkle-wallpaper-preview.jpg);
+      position: fixed;
+      width: 100%;
+      height: 600px;
+      /*same height as jumbotron */
+      top: 15;
+      left: 0;
+      z-index: -1;
+    }
+
+    .jumbotron {
+      height: 600px;
+      color: white;
+      text-shadow: #444 0 1px 1px;
+      background: transparent;
+    }
+  </style>
     
   </head>
   <body>
@@ -24,7 +42,7 @@
   </div>
 
     <div class="site-section">
-      <div class="container">
+      <div class="container mt-4">
         <div class="row mb-5">
           <form class="col-md-12" method="post">
             <div class="site-blocks-table">
@@ -37,40 +55,41 @@
                   </tr>
                 </thead>
                 <?php
-            include_once "conexion_catalogo.php";
-            $conexion = mysqli_connect($db_host, $db_user, $db_pass, $db_database);
-            if ($conexion != true) {
-              die("Error de conexion " . mysqli_connect_error());
-            }
-            $sql = "SELECT `id_producto`, `nombre_producto`, `precio`, `foto_original`, `tipo_de_joya_id` FROM `producto`";
-            $resultSet = mysqli_query($conexion, $sql);
-                while ($row = mysqli_fetch_row($resultSet)) {
+                
+           $sql = 'select nombre_producto,precio_oferta,foto,foto_original,precio from producto where id_producto='.$_GET['id_compra'];
+           foreach ($conexion->query($sql) as $registro) {
+               $registro['nombre_producto'] = htmlentities($registro['nombre_producto']);
+               $registro['precio'] = htmlentities($registro['precio']);
+               $registro['precio_oferta'] = htmlentities($registro['precio_oferta']);
+
                 echo <<<fin
                 <tbody>
                   <tr>
                     <td class="foto">
-                      <img src="img/productos/<?php echo $row[3]; ?>" class="card-img-top">
+                      <img src="img/productos/{$registro['foto_original']}"
+                       class="card-img-top" width="80" height="250" >
                     </td>
                     <td class="nombre_producto">
-                      <h2 class="h5 text-black"><?php echo $row[1]; ?></h2>
+                      <h2 class="h5 text-black">  {$registro['nombre_producto']} </h2>
                     </td>
-                    <td>$<?php echo $row[4]; ?></td>
+                    <td>$ {$registro['precio']}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </form>
         </div>
-        ";
+
+fin;
+           $total = $registro['precio_oferta']*1.16;
                 }
-        ";
-                }
+
         ?>
         <div class="row">
           <div class="col-md-6">
             <div class="row mb-5">
               <div class="col-md-6">
-                <button href="catalogo.php" class="btn btn-outline-primary btn-sm btn-block" >Continuar Comprando</button>
+                <a href="catalogo.php" class="btn btn-outline-primary btn-sm btn-block" >Continuar Comprando</a>
               </div>
             </div>
           </div>
@@ -87,7 +106,7 @@
                     <span class="text-black">Subtotal</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
+                    <strong class="text-black"><?php echo($registro['precio_oferta']) ?></strong>
                   </div>
                 </div>
                 <div class="row mb-5">
@@ -95,7 +114,7 @@
                     <span class="text-black">Total</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black">$230.00</strong>
+                    <strong class="text-black"><?php echo($total) ?></strong>
                   </div>
                 </div>
 
@@ -113,6 +132,17 @@
   </div>
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+    var jumboHeight = $('.jumbotron').outerHeight();
 
+    function parallax() {
+      var scrolled = $(window).scrollTop();
+      $('.bg').css('height', (jumboHeight - scrolled) + 'px');
+    }
+
+    $(window).scroll(function(e) {
+      parallax();
+    });
+  </script>
 </body>
 </html>
