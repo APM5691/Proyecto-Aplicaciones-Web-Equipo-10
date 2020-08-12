@@ -34,7 +34,7 @@ if (false == $materiales) {
 </head>
 
 <body>
-    <?php readfile('./menu.html'); ?>
+    <?php require_once('./menu.php'); ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
@@ -49,7 +49,7 @@ if (false == $materiales) {
                             aria-describedby="id_help">
                     </div>
                     <div class="form-group">
-                    <label for="tipo_material">Tipo de Material de Material</label>
+                    <label for="tipo_material">Tipo de Material</label>
                         <input type="text" class="form-control form-control-sm" id="tipo_material" name="tipo_material" aria-describedby="id_help">
                     </div>
                         <button class="btn btn-warning btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>

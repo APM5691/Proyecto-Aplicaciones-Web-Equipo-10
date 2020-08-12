@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-<?php readfile('./menu.html'); ?>
+<?php require_once('./menu.php'); ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">
@@ -30,7 +30,7 @@
                     echo <<<fin
                     <div class="form-group">
                         <label for="tipo_material_id">Tipo Material</label>
-                        <select multiple class="form-control" id="tipo_material_id" name="tipo_material_id">
+                        <select type="text" class="form-control" id="tipo_material_id" name="tipo_material_id">
 fin;
                     foreach ($conexion->query($sql) as $registro) {
                     echo <<<fin
@@ -74,18 +74,20 @@ fin;
                             aria-describedby="precio_oferta_help">
                         <small id="precio_oferta_help" class="form-text text-muted">Describe el producto</small>
                     </div>
-                    <div class="form-group">
-                        <label for="foto">Foto</label>
-                        <input type="image" class="form-control form-control-sm" id="foto" name="foto"
+                    <form>
+                        <div class="form-group">
+                            <label for="foto">Agrega una foto</label>
+                            <input type="file" class="form-control-file" id="foto"name="foto"
                             aria-describedby="foto_help">
-                        <small id="foto_help" class="form-text text-muted">Inserta una foto</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="foto_original">Foto Original</label>
-                        <input type="image" class="form-control form-control-sm" id="foto_original" name="foto_original"
+                        </div>
+                    </form>
+                    <form>
+                        <div class="form-group">
+                            <label for="foto_original">Agrega una foto original</label>
+                            <input type="file" class="form-control-file" id="foto_original"name="foto_original"
                             aria-describedby="foto_original_help">
-                        <small id="foto_original_help" class="form-text text-muted">Inserta una foto original</small>
-                    </div>
+                        </div>
+                    </form>
                         <a href="productos_guardar.php" class="btn btn-success float-right"> Siguiente</a>
                 </form>
             </div>

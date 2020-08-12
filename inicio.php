@@ -38,7 +38,7 @@ session_start();
 
   <div class="bg"></div>
   <div class="jumbotron">
-    <h1>Joyeria Luminosete</h1>
+    <h1>Joyeria Luminosite</h1>
     <p class="lead">El lujo no debe, salir caro</p>
   </div>
   </div>
@@ -59,7 +59,7 @@ session_start();
     <div class="row">
       <h2>MISIÓN DE LA ORGANIZACIÓN</h2>
       Ofrecer una amplia variedad de joyas con la mejor, calidad y
-valor, y brindar los mejores precios en el mercado.
+      valor, y brindar los mejores precios en el mercado.
 
       <h2>VISIÓN DE LA ORGANIZACIÓN</h2>
       Crecer como empresa líder en el mercado de de venta de joyas de segunda mano en línea,buscando la innovación en el sector, motivados por la pasión y compromiso para nuestra empresa y sus nuevos intereses.
