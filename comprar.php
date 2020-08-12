@@ -28,13 +28,13 @@ fin;
       header('Location: detalle_producto.php?info=No se encontro datos de este producto');
       exit;
 }
+$p=htmlentities($producto['precio_oferta']);
 
-echo htmlentities($producto['precio_oferta']);
 
 require_once './conexion.php';
 $sql = <<<fin
 insert into venta set
-    monto_total = 4999
+    monto_total = $p
     , direcciones_id = 2
     , clientes_id1 = 2
 fin;
