@@ -42,12 +42,12 @@
               <label class="form-check-label" for="perfil">Administrador</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="perfil" id="perfil" value="Tecnico" />
-              <label class="form-check-label" for="perfil">Tecnico</label>
+              <input class="form-check-input" type="radio" name="perfil" id="perfil2" value="Tecnico" />
+              <label class="form-check-label" for="perfil2">Tecnico</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="perfil" id="perfil" value="Staff" />
-              <label class="form-check-label" for="perfil">Staff</label>
+              <input class="form-check-input" type="radio" name="perfil" id="perfil3" value="Staff" />
+              <label class="form-check-label" for="perfil3">Staff</label>
             </div>
           </div>
           <div class="form-group">
@@ -57,8 +57,8 @@
               <label class="form-check-label" for="estatus">Activo</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="estatus" id="estatus" value="Inactivo" />
-              <label class="form-check-label" for="estatus">Inactivo</label>
+              <input class="form-check-input" type="radio" name="estatus" id="estatus2" value="Inactivo" />
+              <label class="form-check-label" for="estatus2">Inactivo</label>
             </div>
           </div>
           <div class="form-group">
@@ -68,12 +68,12 @@
               <label class="form-check-label" for="sexo">Hombre</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Mujer" />
-              <label class="form-check-label" for="sexo">Mujer</label>
+              <input class="form-check-input" type="radio" name="sexo" id="sexo2" value="Mujer" />
+              <label class="form-check-label" for="sexo2">Mujer</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Indeterminado" />
-              <label class="form-check-label" for="sexo">Indeterminado</label>
+              <input class="form-check-input" type="radio" name="sexo" id="sexo3" value="Indeterminado" />
+              <label class="form-check-label" for="sexo3">Indeterminado</label>
             </div>
           </div>
           <div class="form-group">
