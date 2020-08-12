@@ -95,7 +95,7 @@ fin;
                             
                             
                             
-                            <form action="calcular_subtotal.php" method="post">
+                            <!-- <form action="calcular_subtotal.php" method="post">
                             
                                 <div class="form-group">
                                     <label for="cantidad_producto">Introduce la cantidad</label>
@@ -104,11 +104,10 @@ fin;
                                     <small id="cantidad_producto_help" class="form-text text-muted">¿Cuantos deseas comprar?</small>
                                 </div>
 
-                            <!-- <input type="int" name="cantidad_producto"> -->
                                 <br>
                                 <a  href="calcular_subtotal.php?id_producto=<?php echo ($producto['id_producto']);?>"></a>
                                 <a class="btn btn-primary" href="calcular_subtotal.php?id_producto=<?php echo htmlentities($producto['id_producto']);?>" role="button">Calcular el precio</a>
-                                </form>
+                                </form> -->
                             <br>
                             <a  href="calcular_subtotal.php?id_producto=<?php echo ($producto['id_producto']);?>"></a>
                                 <a class="btn btn-primary" href="comprar.php?id_producto=<?php echo htmlentities($producto['id_producto']);?>" role="button">

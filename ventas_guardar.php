@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 if (
     !isset($_POST['monto_total']) || empty($_POST['monto_total'])
 ) {

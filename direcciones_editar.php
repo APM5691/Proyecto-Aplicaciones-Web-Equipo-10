@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 if (!isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
     header('Location: direcciones.php');
     exit;
