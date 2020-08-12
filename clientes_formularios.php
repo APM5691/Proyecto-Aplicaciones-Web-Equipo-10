@@ -10,27 +10,27 @@
 </head>
 
 <body>
-  <?php readfile('./menu.html'); ?>
+  <?php require_once('./menu.php'); ?>
   <div class="container mt-4">
     <div class="card">
       <div class="card-header">
         Formulario Para Clientes
       </div>
       <div class="card-body">
-        <form action="clientes_guardar.php" method="post">
+        <form action="clientes_guardar.php" method="post" enctype='multipart/form-data'>
           <div class="form-group">
             <label for="nombre_cliente">Nombre</label>
-            <input type="text" class="form-control form-control-sm" id="nombre_cliente" name="nombre_cliente" aria-describedby="nombre_help" required/>
+            <input type="text" class="form-control form-control-sm" id="nombre_cliente" name="nombre_cliente" aria-describedby="nombre_help" required />
             <small id="nombre_help" class="form-text text-muted">Escribe tu nombre</small>
           </div>
           <div class="form-group">
             <label for="primer_apellido">Primer Apellido</label>
-            <input type="text" class="form-control form-control-sm" id="primer_apellido" name="primer_apellido" aria-describedby="primer_apellido" required/>
+            <input type="text" class="form-control form-control-sm" id="primer_apellido" name="primer_apellido" aria-describedby="primer_apellido" required />
             <small id="primer_apellido_help" class="form-text text-muted">Escribe tu primer Apellido</small>
           </div>
           <div class="form-group">
             <label for="segundo_apellido">Segundo Apellido</label>
-            <input type="text" class="form-control form-control-sm" id="segundo_apellido" name="segundo_apellido" aria-describedby="segundo_apellido" required/>
+            <input type="text" class="form-control form-control-sm" id="segundo_apellido" name="segundo_apellido" aria-describedby="segundo_apellido" required />
             <small id="segundo_apellido_help" class="form-text text-muted">Escribe tu segundo nombre si tienes</small>
           </div>
 
@@ -78,30 +78,32 @@
           </div>
           <div class="form-group">
             <label for="correo_electronico">Direccion de E-mail </label>
-            <input type="text" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_electronico" required/>
+            <input type="text" class="form-control form-control-sm" id="correo_electronico" name="correo_electronico" aria-describedby="correo_electronico" required />
             <small id="email_help" class="form-text text-muted">Escribe tu Email</small>
           </div>
           <div class="form-group">
             <label for="password">Contraseña</label>
-            <input type="password" class="form-control form-control-sm" id="password" name="password" aria-describedby="password" required/>
+            <input type="password" class="form-control form-control-sm" id="password" name="password" aria-describedby="password" required />
             <small id="password_help" class="form-text text-muted">Escribe tu Contraseña</small>
           </div>
           <div class="form-group">
             <label for="password">Confirmar Contraseña</label>
-            <input type="password" class="form-control form-control-sm" id="password2" name="password2" aria-describedby="password2" required/>
+            <input type="password" class="form-control form-control-sm" id="password2" name="password2" aria-describedby="password2" required />
             <small id="password_help" class="form-text text-muted">Confirmar tu Contraseña</small>
           </div>
 
 
           <div class="form-group">
             <label for="telefono">Telefono</label>
-            <input type="tel" class="form-control form-control-sm" id="telefono" name="telefono" aria-describedby="telefono" required/>
+            <input type="tel" class="form-control form-control-sm" id="telefono" name="telefono" aria-describedby="telefono" required />
             <small id="telefono_help" class="form-text text-muted">Telefono</small>
           </div>
+
           <div class="form-group">
-            <label for="comentarios">Comentarios</label>
-            <textarea class="form-control" id="comentarios" name="comentarios" rows="3"></textarea>
-          </div>
+            <input type='file' name='imagen' accept="image/*">
+            <br>
+            </div>
+          
           <button class="btn btn-success btn-sm" type="submit">
             <i class="fa fa-save"></i> Guardar
           </button>
@@ -110,24 +112,24 @@
     </div>
   </div>
   <div class="modal" tabindex="-1" role="dialog" id="dsm33-modal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">ATENCIÓN</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p><?php echo isset($_REQUEST['error']) ? htmlentities($_REQUEST['error']) : '&nbsp;';?></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
-            </div>
-            </div>
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">ATENCIÓN</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body">
+          <p><?php echo isset($_REQUEST['error']) ? htmlentities($_REQUEST['error']) : '&nbsp;'; ?></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Aceptar</button>
+        </div>
+      </div>
     </div>
-        
+  </div>
+
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <?php

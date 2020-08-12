@@ -31,12 +31,13 @@ $registro['sexo'] = htmlentities($registro['sexo']);
 $registro['telefono'] = htmlentities($registro['telefono']);
 $registro['estatus'] = htmlentities($registro['estatus']);
   }
+  echo($registro['foto_perfil']);
  ?>
 <div class="container mt-4">
      <div class="card text-center" >
   <div class="row no-gutters">
     <div class="col-md-4">
-      <img src=".\img\fotos_perfil\<?php echo($registro['foto_perfil']);?>.jpg" class="card-img" alt="...">
+      <img src="./<?php echo($registro['foto_perfil']); ?>" class="card-img" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">

@@ -19,6 +19,16 @@ if (
 }
 
 require_once './conexion.php';
+$nombreimg = $_FILES['imagen']['name'];
+$archivo = $_FILES['imagen']['tmp_name'];
+$ruta ="img";
+
+$ruta=$ruta."/"."fotos_perfil"."/".$nombreimg;
+
+move_uploaded_file($archivo,$ruta);
+
+$_POST['foto_perfil']=$ruta;
+
 $sql = <<<fin
 insert into cliente set
     nombre_cliente = :nombre_cliente
@@ -30,7 +40,7 @@ insert into cliente set
     , sexo = :sexo
     , perfil= :perfil
     , estatus= :estatus
-    
+    , foto_perfil = :foto_perfil
 
 fin;
 
@@ -45,6 +55,8 @@ $sentencia->execute([
     , ':sexo' => $_POST['sexo']
     , ':perfil' => $_POST['perfil']
     , ':estatus' => $_POST['estatus']
+    , ':foto_perfil' => $_POST['foto_perfil']
+    
 ]);
 header('Location: clientes.php?info=Usuario creado exitosamente');
 ?>
