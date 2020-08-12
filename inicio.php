@@ -46,6 +46,7 @@ if (!isset($_SESSION)) { session_start(); }
   <div class="container">
     <div class="row">
       <h2>ANTECEDENTES DE LA ORGANIZACIÓN</h2>
+      <br>
       Joyería Luminosité es una empresa orgullosamente mexicana , establecida en el año 2020
       ubicada en Toluca con presencia en el centro de toluca, a un lado de la plaza de los mártires.
 
@@ -55,15 +56,19 @@ if (!isset($_SESSION)) { session_start(); }
       Nos enfocamos en la venta de joyeria de segunda mano, no incluyendo los aspectos de distribución y entrega de los productos, directamente la empresa no proporciona estos servicios pero contando con terceros para la distribución.
 
     </div>
+    <br>
     <hr>
     <div class="row">
+    <br>
       <h2>MISIÓN DE LA ORGANIZACIÓN</h2>
       Ofrecer una amplia variedad de joyas con la mejor, calidad y
       valor, y brindar los mejores precios en el mercado.
-
+      <br>
       <h2>VISIÓN DE LA ORGANIZACIÓN</h2>
+      <br>
       Crecer como empresa líder en el mercado de de venta de joyas de segunda mano en línea,buscando la innovación en el sector, motivados por la pasión y compromiso para nuestra empresa y sus nuevos intereses.
       <h2>OBJETIVOS DE LA ORGANIZACIÓN</h2>
+      <br>
       Promover un mercado dentro del sector de la joyería de segunda mano a una escala global,convirtiendo a nuestra empresa en una de las mejores dentro de su campo.
 
     </div>

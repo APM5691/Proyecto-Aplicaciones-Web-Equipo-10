@@ -15,14 +15,24 @@
       <li class="nav-item">
         <a class="nav-link active" href="catalogo.php">Catalogo</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="index.php"><i class="fa fa-address-card"></i> Inicio de Sesion</a>
-      </li>
+      <?php
+      if(!isset($_SESSION['id'])){
+        echo '<li class="nav-item">
+         <a class="nav-link active" href="index.php"><i class="fa fa-address-card"></i> Inicio de Sesion</a>
+       </li>';
+      }elseif(isset($_SESSION['id'])&& is_numeric($_SESSION['id'])){
+        
+      }
+      ?>
+      <?php
+        if(isset($_SESSION['id']) && is_numeric($_SESSION['id']) && 'Administrador' == $_SESSION['perfil']){
+          echo ' 
       <li class="nav-item dropdown">
         <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
           aria-haspopup="true" aria-expanded="false">
           Opciones
         </a>
+        
         <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #f5ef38;">
           <a class="dropdown-item" href="ventas.php"><i class="fa fa-piggy-bank"></i> Ventas</a>
           <a class="dropdown-item" href="materiales.php"><i class="fa fa-user"></i> Materiales</a>
@@ -30,7 +40,10 @@
           <a class="dropdown-item" href="clientes.php"><i class="fa fa-user-circle"></i> Clientes</a>
           <a class="dropdown-item" href="tipo_de_joya.php"><i class="fa fa-ring"></i> Tipo de Joya</a>
         </div>
-      </li>
+      </li>';
+
+    }
+    ?>
       <?php
       if(isset($_SESSION['id']) && is_numeric($_SESSION['id'])){
      echo ' <li class="nav-item">
@@ -58,9 +71,9 @@
       ?>
 
       <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search" />
-      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+      <a href="Productos.php?buscar=hola" class="btn btn-outline-light my-2 my-sm-0" type="submit">
         Buscar
-      </button>
+      </a>
     </form>
   </div>
 </nav>

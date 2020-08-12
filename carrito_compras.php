@@ -1,5 +1,5 @@
 <?php
-    session_start(); 
+    require_once './checar_sesion.php';
     include("./conexion.php");
     
 ?>
@@ -44,52 +44,66 @@
     <div class="site-section">
       <div class="container mt-4">
         <div class="row mb-5">
-          <form class="col-md-12" method="post">
+          
+          <form class="col-md-12">
             <div class="site-blocks-table">
               <table class="table table-bordered">
                 <thead>
                   <tr>
+                  <th class="nombre_producto">Producto</th>
+                  <th class="precio">Precio</th>
                     <th class="foto">Image</th>
-                    <th class="nombre_producto">Producto</th>
-                    <th class="precio">Precio</th>
+                    
+                    
                   </tr>
                 </thead>
+
                 <?php
+print_r($_GET);
+print_r($_POST);
+
                 
-           $sql = 'select nombre_producto,precio_oferta,foto,foto_original,precio from producto where id_producto='.$_GET['id_compra'];
-           foreach ($conexion->query($sql) as $registro) {
-               $registro['nombre_producto'] = htmlentities($registro['nombre_producto']);
-               $registro['precio'] = htmlentities($registro['precio']);
-               $registro['precio_oferta'] = htmlentities($registro['precio_oferta']);
+        //         $array = array($_GET['id_compra']);
+                
 
-                echo <<<fin
-                <tbody>
-                  <tr>
-                    <td class="foto">
-                      <img src="img/productos/{$registro['foto_original']}"
-                       class="card-img-top" width="80" height="250" >
-                    </td>
-                    <td class="nombre_producto">
-                      <h2 class="h5 text-black">  {$registro['nombre_producto']} </h2>
-                    </td>
-                    <td>$ {$registro['precio']}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </form>
-        </div>
+        //    $sql = 'select nombre_producto,precio_oferta,foto,foto_original,precio from producto where id_producto='.$array[0];
+        //    foreach ($conexion->query($sql) as $registro) {
+        //        $registro['nombre_producto'] = htmlentities($registro['nombre_producto']);
+        //        $registro['precio'] = htmlentities($registro['precio']);
+        //        $registro['precio_oferta'] = htmlentities($registro['precio_oferta']);
 
-fin;
-           $total = $registro['precio_oferta']*1.16;
-                }
+        //         echo <<<fin
+        //         <tbody>
+        //           <tr>
+        //             <td class="nombre_producto">
+        //               <h2 class="h5 text-black">  {$registro['nombre_producto']} </h2>
+        //             </td>
+        //             <td>$ {$registro['precio']}</td>
+        //             <td class="foto">
+        //               <img src="img/productos/{$registro['foto_original']}"
+        //                class="card-img-top"  height="300" >
+        //             </td>
+
+        //           </tr>
+        //         </tbody>
+        //       </table>
+        //     </div>
+        //   </form>
+        // </div>
+
+// fin;
+//           $use="";
+//           $use=$array[0];
+          
+//            $total = $registro['precio_oferta']*1.16;
+ //                 }
 
         ?>
         <div class="row">
           <div class="col-md-6">
             <div class="row mb-5">
               <div class="col-md-6">
-                <a href="catalogo.php" class="btn btn-outline-primary btn-sm btn-block" >Continuar Comprando</a>
+                <a href="guardar_carrito.php?sav=<?php echo($use); ?>&monto_total= <?php echo($total) ?>&clientes_id1= <?php echo($_SESSION['id']) ?>" class="btn btn-outline-primary btn-sm btn-block" >Continuar Comprando</a>
               </div>
             </div>
           </div>
@@ -114,22 +128,26 @@ fin;
                     <span class="text-black">Total</span>
                   </div>
                   <div class="col-md-6 text-right">
-                    <strong class="text-black"><?php echo($total) ?></strong>
+                    <strong class="text-black" name="monto_total" value=""><?php echo($total) ?></strong>
                   </div>
                 </div>
 
                 <div class="row">
                   <div class="col-md-12">
-                    <button class="btn btn-primary btn-lg py-3 btn-block" onclick="window.location=''">Comprar</button>
+                    
+                    <button class="btn btn-success btn-lg py-3 btn-block" type="submit">Comprar</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          
         </div>
+        
       </div>
     </div>
   </div>
+  
 <script src="js/jquery-3.5.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>

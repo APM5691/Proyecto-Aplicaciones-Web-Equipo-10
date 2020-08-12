@@ -32,6 +32,7 @@ require_once './conexion.php';
                             <th style="width: 30%;" scope="col">Correo</th>
                             <th style="width: 25%;" scope="col">Perfil</th>
                             <th style="width: 25%;" scope="col">Estatus</th>
+                            <th style="width: 25%;" scope="col">Borrar</th>
                             <th style="width: 10%;" scope="col">Editar</th>
                             <th style="width: 10%;" scope="col">
                             </th>
@@ -54,6 +55,9 @@ require_once './conexion.php';
                             <td scope="row">{$registro['correo_electronico']}</td>
                             <td scope="row">{$registro['perfil']}</td>
                             <td scope="row">{$registro['estatus']}</td>
+                            <td>
+                                <a class="btn btn-outline-danger btn-sm" href="clientes_borrar.php?id_cliente={$registro['id_cliente']}"><i class="fa fa-trash-alt"></i></a>
+                            </td>
                             <td>
                                 <a class="btn btn-secondary btn-sm" href="clientes_editar.php?id={$registro['id_cliente']}"><i class="fa fa-edit"></i></a>
                             </td>
