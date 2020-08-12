@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 if (
     !isset($_POST['calle']) || empty($_POST['calle'])
     || !isset($_POST['clientes_id']) || empty($_POST['clientes_id'])

@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 require_once './conexion.php';
 ?>
 <!DOCTYPE html>
@@ -13,7 +16,7 @@ require_once './conexion.php';
 </head>
 
 <body>
-<?php readfile('./menu.html'); ?>
+<?php require_once('./menu.php'); ?>
   <div class="container mt-4">
     <div class="card">
       <div class="card-header">

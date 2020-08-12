@@ -1,7 +1,6 @@
 <?php
 
-require_once'./checar_sesion.php';
-
+require_once './checar_sesion.php';
 require_once './conexion.php';
 ?>
 <!DOCTYPE html>
@@ -45,8 +44,11 @@ require_once './conexion.php';
                             $registro['nombre_cliente'] = htmlentities($registro['nombre_cliente']);
                             $registro['primer_apellido'] = htmlentities($registro['primer_apellido']);
                             $registro['correo_electronico'] = htmlentities($registro['correo_electronico']);
+                            $registro['estatus'] = htmlentities($registro['estatus']);
+                            
+                            if ($registro['estatus']=="Activo"){
                         echo <<<fin
-
+                     
                         <tr>
                             <td scope="row">{$registro['nombre_cliente']}</td>
                             <td scope="row">{$registro['correo_electronico']}</td>
@@ -57,6 +59,7 @@ require_once './conexion.php';
                             </td>
                         </tr>
 fin;
+                            }
                 }
                         ?>
                     </tbody>
