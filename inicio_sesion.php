@@ -26,16 +26,17 @@ if($usuario==false){
    
     exit;
 }
+echo($_POST['password'] .$usuario['password']);
 
 // ¿contraseña coincide?
 if (!password_verify($_POST['password'], $usuario['password'])) {
-    header('Location: index.php?error=Usuario o password incorrectos');
-    exit;
+    // header('Location: index.php?error=Usuario o password incorrectos');
+    // exit;
 }
 session_start();
 $_SESSION['id']=$usuario['id_cliente'];
 $_SESSION['nombre']=$usuario['nombre_cliente'];
 $_SESSION['perfil']=$usuario['perfil'];
 
-header('Location: inicio.php?info=Bienvenido '.$usuario['nombre_cliente']);
+// header('Location: inicio.php?info=Bienvenido '.$usuario['nombre_cliente']);
 ?>

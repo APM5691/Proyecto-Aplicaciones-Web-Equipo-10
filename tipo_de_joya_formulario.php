@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -10,7 +13,7 @@
 </head>
 
 <body>
-    <?php readfile('./menu.html'); ?>
+<?php require_once('./menu.php'); ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">

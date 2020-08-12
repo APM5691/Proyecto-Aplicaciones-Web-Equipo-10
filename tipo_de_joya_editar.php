@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_REQUEST['id_tipo_de_joya']) && is_numeric($_REQUEST['id_tipo_de_joya'])) {
     header('Location: tipo_de_joya.php');
     exit;
@@ -33,7 +34,7 @@ if (false == $tipo_joya) {
 </head>
 
 <body>
-    <?php readfile('./menu.html'); ?>
+    <?php require_once './menu.php'; ?>
     <div class="container mt-4">
         <div class="card">
             <div class="card-header">

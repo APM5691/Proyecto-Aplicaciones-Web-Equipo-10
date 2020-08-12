@@ -1,3 +1,9 @@
+<!-- <?php
+if(isset($_SESSION['id']) && is_numeric($_SESSION['id'])){
+require_once'./checar_sesion.php';
+}
+?> -->
+
 <!DOCTYPE html>
 <html lang="es-MX">
 
