@@ -41,10 +41,13 @@ require_once './conexion.php';
 
                         <tr>
                             <td scope="row">{$registro['tipo_joya']}</td>
-                            
+                            <td>
+                                <a class="btn btn-outline-danger btn-sm" href="tipo_de_joya_borrar.php?id_tipo_de_joya={$registro['id_tipo_de_joya']}"><i class="fa fa-trash-alt"></i></a>
+                            </td>
                             <td>
                                 <a class="btn btn-secondary btn-sm" href="tipo_de_joya_editar.php?id_tipo_de_joya={$registro['id_tipo_de_joya']}"><i class="fa fa-edit"></i></a>
                             </td>
+                            
                         </tr>
 fin;
                 }

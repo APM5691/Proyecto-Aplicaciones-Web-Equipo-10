@@ -1,3 +1,6 @@
+<?php
+require_once './checar_sesion.php';
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>

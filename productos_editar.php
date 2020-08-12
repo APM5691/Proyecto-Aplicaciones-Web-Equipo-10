@@ -52,7 +52,7 @@ if (false == $cliente) {
                 <form action="productos_actualizar.php" method="post">
                     <div class="form-group">
                         <label for="nombre">Nombre del Producto</label>
-                        <input type="text" class="form-control form-control-sm" id="nombre_producto" name="nombre_producto" aria-describedby="nombre_producto_help" value="<?php echo htmlentities($cliente['nombre_cliente']); ?>" required>
+                        <input type="text" class="form-control form-control-sm" id="nombre_producto" name="nombre_producto" aria-describedby="nombre_producto_help" value="<?php echo htmlentities($cliente['nombre_producto']); ?>" required>
                     </div>
                     <?php
                     require_once './conexion.php';

@@ -59,44 +59,43 @@
                 </thead>
 
                 <?php
-print_r($_GET);
-print_r($_POST);
+
 
                 
-        //         $array = array($_GET['id_compra']);
+                $array = array($_GET['id_compra']);
                 
 
-        //    $sql = 'select nombre_producto,precio_oferta,foto,foto_original,precio from producto where id_producto='.$array[0];
-        //    foreach ($conexion->query($sql) as $registro) {
-        //        $registro['nombre_producto'] = htmlentities($registro['nombre_producto']);
-        //        $registro['precio'] = htmlentities($registro['precio']);
-        //        $registro['precio_oferta'] = htmlentities($registro['precio_oferta']);
+           $sql = 'select nombre_producto,precio_oferta,foto,foto_original,precio from producto where id_producto='.$_GET['id_compra'];
+           foreach ($conexion->query($sql) as $registro) {
+               $registro['nombre_producto'] = htmlentities($registro['nombre_producto']);
+               $registro['precio'] = htmlentities($registro['precio']);
+               $registro['precio_oferta'] = htmlentities($registro['precio_oferta']);
 
-        //         echo <<<fin
-        //         <tbody>
-        //           <tr>
-        //             <td class="nombre_producto">
-        //               <h2 class="h5 text-black">  {$registro['nombre_producto']} </h2>
-        //             </td>
-        //             <td>$ {$registro['precio']}</td>
-        //             <td class="foto">
-        //               <img src="img/productos/{$registro['foto_original']}"
-        //                class="card-img-top"  height="300" >
-        //             </td>
+                echo <<<fin
+                <tbody>
+                  <tr>
+                    <td class="nombre_producto">
+                      <h2 class="h5 text-black">  {$registro['nombre_producto']} </h2>
+                    </td>
+                    <td>$ {$registro['precio']}</td>
+                    <td class="foto">
+                      <img src="img/productos/{$registro['foto_original']}"
+                       class="card-img-top"  height="300" >
+                    </td>
 
-        //           </tr>
-        //         </tbody>
-        //       </table>
-        //     </div>
-        //   </form>
-        // </div>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div>
 
-// fin;
-//           $use="";
-//           $use=$array[0];
+fin;
+          $use="";
+          $use=$array[0];
           
-//            $total = $registro['precio_oferta']*1.16;
- //                 }
+           $total = $registro['precio_oferta']*1.16;
+                 }
 
         ?>
         <div class="row">
@@ -135,7 +134,8 @@ print_r($_POST);
                 <div class="row">
                   <div class="col-md-12">
                     
-                    <button class="btn btn-success btn-lg py-3 btn-block" type="submit">Comprar</button>
+                   
+                    <a class="btn btn-success btn-lg py-3 btn-block" href="ventas_guardar.php?monto_total=<?php echo($total) ?> & clientes_id1=<?php echo($_SESSION['id']) ?>" role="button">Comprar</a>
                   </div>
                 </div>
               </div>

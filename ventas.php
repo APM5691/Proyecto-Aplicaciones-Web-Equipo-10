@@ -20,7 +20,7 @@ require_once './conexion.php';
         <div class="card">
             <div class="card-header">
                 Ventas
-                <a href="ventas_formulario.php"class="btn btn-success float-right">Agregar</a>
+                <!-- <a href="ventas_formulario.php"class="btn btn-success float-right">Agregar</a> -->
         </div>
             <div class="card-body">
                 <table class="table table-dark table table-hover">

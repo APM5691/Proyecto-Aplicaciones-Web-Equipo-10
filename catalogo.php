@@ -108,15 +108,7 @@ if (!isset($_SESSION)) {
                 </p>
                 <a class="btn btn-primary" href="detalle_producto.php?id_producto=<?php echo $row[0]; ?>">Ver detalles</a>
                
-                <div class="form-group">
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" value="<?php echo $row[0]; ?>" id="id_producto.<?php echo $row[0]; ?>">
-                  <label class="form-check-label" for="id_producto.<?php echo $row[0]; ?>">
-                    Agregar al carrito
-                    <?php $array=array($row[0]);?>
-                  </label>
-                </div>
-                </div>
+                <a class="btn btn-primary" href="carrito_compras.php?id_compra=<?php echo $row[0]; ?>">Agregar al carrito</a>
 
               </div>
             </div>
@@ -125,8 +117,8 @@ if (!isset($_SESSION)) {
         <?php
         } 
         ?>
-         <p><button class="btn btn-success btn-sm" type="submit">Agregar al carrito</button>
-         <a href="carrito_compras.php?array= <?php print_r($array) ?>" class="btn btn-outline-primary btn-sm btn-block" >Continuar Comprando</a>
+         
+         <a href="carrito_compras.php?id_compra= <?php print_r($array) ?>" class="btn btn-outline-primary btn-sm btn-block" >Continuar Comprando</a>
          </form>
       </div>
     </div>

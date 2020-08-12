@@ -104,16 +104,20 @@ if (false == $cliente) {
                     <div class="form-group">
                         <label for="sexo">Sexo</label><br />
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Hombre" <?php echo 'Hombre' == $cliente['sexo'] ? 'checked' : ''; ?>/>
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Hombre" <?php echo 'Hombre' == $cliente['sexo'] ? 'checked' : ''; ?> />
                             <label class="form-check-label" for="sexo">Hombre</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Mujer" <?php echo 'Mujer' == $cliente['sexo'] ? 'checked' : ''; ?>/>
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Mujer" <?php echo 'Mujer' == $cliente['sexo'] ? 'checked' : ''; ?> />
                             <label class="form-check-label" for="sexo">Mujer</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Indeterminado" <?php echo 'Indeterminado' == $cliente['sexo'] ? 'checked' : ''; ?>/>
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo" value="Indeterminado" <?php echo 'Indeterminado' == $cliente['sexo'] ? 'checked' : ''; ?> />
                             <label class="form-check-label" for="sexo">Indeterminado</label>
+                        </div>
+                        <div class="form-group">
+                            <input type='file' name='imagen'>
+                            <br>
                         </div>
                     </div>
                     <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
@@ -125,4 +129,5 @@ if (false == $cliente) {
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
+
 </html>

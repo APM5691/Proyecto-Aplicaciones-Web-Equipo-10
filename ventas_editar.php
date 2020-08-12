@@ -40,7 +40,7 @@ if (false == $venta) {
         <link rel="stylesheet" href="css/all.min.css">
     </head>
     <body>
-        <?php readfile('./menu.html'); ?>
+        <?php require_once('./menu.php'); ?>
         <div class="container mt-4">
             <div class="card">
                 <div class="card-header">
@@ -64,9 +64,8 @@ if (false == $venta) {
                         
                         
                         <button class="btn btn-primary btn-sm" type="submit"><i class="fa fa-save"></i> guardar</button>
-                        <input type="hid_ventaden" name="id_venta" value="
-                        <?php 
-                        echo $venta['id_venta'];?>">
+                        
+                        
                     </form>
                 </div>
             </div>

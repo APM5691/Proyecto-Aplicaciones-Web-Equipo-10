@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once './checar_sesion.php';
 ?>
 <?php
 if (!isset($_REQUEST['id']) && is_numeric($_REQUEST['id'])) {
@@ -39,7 +39,7 @@ if (false == $direccion) {
     <link rel="stylesheet" href="css/all.min.css">
 </head>
 <body>
-    <?php readfile('./menu.html'); ?>
+    <?php require_once('./menu.php'); ?>
     <div class="container mt-4">
     <div class="card">
       <div class="card-header">

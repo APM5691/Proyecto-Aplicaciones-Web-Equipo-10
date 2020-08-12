@@ -1,3 +1,6 @@
+<?php
+if (!isset($_SESSION)) { session_start(); }
+?>
 <!DOCTYPE html>
 <html lang="es-MX">
 
@@ -130,8 +133,7 @@
     </div>
   </div>
 
-  <script src="js/jquery-3.5.1.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  
   <?php
   if (isset($_REQUEST['error'])) {
     echo <<<fin

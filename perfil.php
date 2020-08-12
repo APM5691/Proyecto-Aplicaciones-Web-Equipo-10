@@ -31,7 +31,7 @@ $registro['sexo'] = htmlentities($registro['sexo']);
 $registro['telefono'] = htmlentities($registro['telefono']);
 $registro['estatus'] = htmlentities($registro['estatus']);
   }
-  echo($registro['foto_perfil']);
+  
  ?>
 <div class="container mt-4">
      <div class="card text-center" >

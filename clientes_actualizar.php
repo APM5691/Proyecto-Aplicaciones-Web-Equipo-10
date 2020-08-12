@@ -15,6 +15,18 @@ if (
 }
 
 require_once './conexion.php';
+
+$nombreimg = $_FILES['imagen']['name'];
+$archivo = $_FILES['imagen']['tmp_name'];
+$ruta ="img";
+
+$ruta=$ruta."/"."fotos_perfil"."/".$nombreimg;
+
+move_uploaded_file($archivo,$ruta);
+
+$_POST['foto_perfil']=$ruta;
+
+
 $sql = <<<fin
 update cliente set
      nombre_cliente = :nombre_cliente
@@ -26,6 +38,7 @@ update cliente set
     , sexo = :sexo
     , perfil = :perfil
     , estatus = :estatus
+    , foto_perfil = :foto_perfil
 where
     id_cliente = :id_cliente
 fin;
@@ -41,6 +54,7 @@ $sentencia->execute([
     , ':perfil' => $_POST['perfil']
     , ':estatus' => $_POST['estatus']
     , ':id_cliente' => $_POST['id_cliente']
+    , ':foto_perfil' => $_POST['foto_perfil']
 ]);
  header('Location: clientes.php?info=Usuario actualizado exitosamente');
  ?>

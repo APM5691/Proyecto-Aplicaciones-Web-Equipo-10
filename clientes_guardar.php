@@ -19,6 +19,7 @@ if (
 }
 
 require_once './conexion.php';
+
 $nombreimg = $_FILES['imagen']['name'];
 $archivo = $_FILES['imagen']['tmp_name'];
 $ruta ="img";
