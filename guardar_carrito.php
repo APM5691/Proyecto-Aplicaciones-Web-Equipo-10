@@ -1,6 +1,4 @@
 <?php
-print_r($_GET);
-
 if (
     !isset($_GET['sav']) || empty($_GET['sav']) 
    // ||  !isset($_GET['monto_total']) || empty($_GET['monto_total'])
