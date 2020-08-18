@@ -15,6 +15,10 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+CREATE DATABASE aplicaciones_web;
+USE aplicaciones_web;
+
 --
 -- Table structure for table `cliente`
 --
@@ -35,7 +39,7 @@ CREATE TABLE `cliente` (
   `estatus` enum('Activo','Inactivo') NOT NULL,
   `foto_perfil` blob NOT NULL,
   PRIMARY KEY (`id_cliente`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +48,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (17,'Angel','Palacios','Mirafuentes','$2y$12$JKs8GBXBoT07l/CW/2de4.PjWSYz3.6tmQYHcSzuPJDeHeenZPLV6','angel_palacios5691@outlook.com','7191001069','Hombre','Administrador','Activo','Angel Palacios MIrafuentes'),(18,'Angel','Palacios','Mirafuentes','$2y$12$L75RVW2ywdPj6YpGBYgSPO.IYl.DVdaMJLXDK7ndWRVn0TTXyMw0q','angel_palacios569@outlook.com','7191001069','Hombre','Staff','Activo',''),(19,'a','a','a','$2y$12$./JdAcBPDOY02vQRyjIGu.QMK.iiu1dF4Z7hi2W4m6KD5lkraGDvO','a@a.com','1','Hombre','Administrador','Activo',''),(20,'a','a','a','$2y$12$/rEypAuyoY/p1CjujcppY.hpZF6/YJu9zHyTA2Pe8392SNzlWuWzy','a@a.com','1','Hombre','Administrador','Inactivo',''),(21,'b','b','b','$2y$12$Kg9qdF0oWCHjmG7id/LvU.wK4zvXEBR6Uoc4LyDHLs6CVLrQ1Z2em','b@b.com','2','Hombre','Administrador','Activo',''),(22,'c','c','c','$2y$12$Tsx6DMVjOLlDliPnBiEDd.2fnv25RD/d7H3ThsXftj4MIVJ2TbK..','c@c.com','3','Hombre','Administrador','Activo',''),(23,'d','d','d','$2y$12$38tp3Gfg04RmGsPXWojFQe6pdE2f334hpiH7l7ho/LQSA5BYAuwiC','d@d.com','4','Hombre','Administrador','Activo','img/fotos_perfil/maxresdefault.jpg'),(25,'d','d','d','$2y$12$VSIv1nwxDi9bY.5yeYJVf.GmI3Iz1xqTeXfdelsrra8QW5l/hTT3m','d@d.com','5','Hombre','Administrador','Activo','img/fotos_perfil/maxresdefault.jpg');
+INSERT INTO `cliente` VALUES (17,'Angel','Palacios','Mirafuentes','$2y$12$JKs8GBXBoT07l/CW/2de4.PjWSYz3.6tmQYHcSzuPJDeHeenZPLV6','angel_palacios5691@outlook.com','7191001069','Hombre','Administrador','Activo','Angel Palacios MIrafuentes'),(18,'Angel','Palacios','Mirafuentes','$2y$12$LgCmk0kzVRo8FrIf9DXMDebjxQOJTa4wyeoOxejL.CBBNAInwp1vm','angel_palacios569@outlook.com','7191001069','Hombre','Staff','Inactivo','img/fotos_perfil/'),(20,'a','a','a','$2y$12$/rEypAuyoY/p1CjujcppY.hpZF6/YJu9zHyTA2Pe8392SNzlWuWzy','a@a.com','1','Hombre','Administrador','Inactivo',''),(26,'Miguel','Herrera','Chavez','$2y$12$PFX6cz8Vd0ffxqVyJUiVOOf6vwtwe2p3b2Bgm4XV4np80QssqunzW','miguel722663@gmail.com','5610835845','Hombre','Administrador','Activo','img/fotos_perfil/pp.jpg'),(28,'Isaac','R','B','$2y$12$znT7LdZ4Q1geAQr7OojwTO.MU95S67WzGDb8vRCY9Gec56FjdBFfm','jamiezuarez2@gmail.com','1','Hombre','Staff','Activo','img/fotos_perfil/'),(30,'Aeternum','Vale','Amocuare','$2y$12$Mo1y0fuAeTsg1pRLYJGZYuf7GFnBXUzHQH98Ny99byydiM4qasNC.','aeternum@correo.com','1234567890','Hombre','Administrador','Activo','img/fotos_perfil/00interesante.jpg'),(31,'Josue','Manjarrez','Careaga','$2y$12$IAKS576wIoetXF/io70aIeLN1vM4MRW3Q6AKeAEzAX/blAzzsd2ge','josuemanjarrezcareaga.2001@gmail.com','7229999999','Hombre','Administrador','Activo','img/fotos_perfil/'),(32,'Bryan','Bautista','Reyes','$2y$12$1WHRrL4StpnEiWs8SU8uq.zyFyVRR0dH/51FYT9tu.z2cWHPgqN1u','al221910597@gmail.com','7224611039','Hombre','Staff','Activo','img/fotos_perfil/'),(39,'admin','   ','   ','$2y$12$E9mu31lBlHtCz4JhecQtW.cQzjCM1SQE6PsM/GQUwULJZkUDrlsHG','admin@correo.com','   ','Mujer','Administrador','Activo','img/fotos_perfil/');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -116,7 +120,7 @@ CREATE TABLE `direccion` (
   `municipio_id` int(11) DEFAULT NULL,
   `estado_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id_direccion`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +129,7 @@ CREATE TABLE `direccion` (
 
 LOCK TABLES `direccion` WRITE;
 /*!40000 ALTER TABLE `direccion` DISABLE KEYS */;
-INSERT INTO `direccion` VALUES (1,1,'Independencia',3,'San Nicolas',1,1),(2,2,'Adolfo Lopez Mateos',7,'Xochicalco',3,2),(3,2,'Lazaro Cardenas',15,'San Francisco',2083,13),(4,3,'Independencia',203,'San Francisco',1917,7),(5,43,'5 de mayo',99,'La Esperanza',225,18),(6,12,'16 de septiembre',12,'Colonia Albaro Obregón',21,12),(7,15,'15 de septiembre',12,'Villa',732,15),(8,43,'16 de septiembre',11,'Colonia Albaro Obregón',944,18);
+INSERT INTO `direccion` VALUES (1,1,'Independencia',3,'San Nicolas',1,1),(2,2,'Adolfo Lopez Mateos',7,'Xochicalco',3,2),(3,2,'Lazaro Cardenas',15,'San Francisco',2083,13),(4,3,'Independencia',203,'San Francisco',1917,7),(5,43,'5 de mayo',99,'La Esperanza',225,18),(6,12,'16 de septiembre',12,'Colonia Albaro Obregón',21,12),(7,15,'15 de septiembre',12,'Villa',732,15),(8,43,'16 de septiembre',11,'Colonia Albaro Obregón',944,18),(9,NULL,'Avenida independencia',247,'Santa Maria tetitla',723,15);
 /*!40000 ALTER TABLE `direccion` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -165,7 +169,7 @@ CREATE TABLE `materiales` (
   `nombre` varchar(45) DEFAULT NULL,
   `tipo_material` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id_material`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -174,7 +178,7 @@ CREATE TABLE `materiales` (
 
 LOCK TABLES `materiales` WRITE;
 /*!40000 ALTER TABLE `materiales` DISABLE KEYS */;
-INSERT INTO `materiales` VALUES (1,'pepitas','oro');
+INSERT INTO `materiales` VALUES (1,'pepitas','pepita de oro'),(15,'pepitas','pepitas de plata'),(16,'Cristales ','Diamante'),(17,'pepitas de oro','Pepitas de Oro blanco');
 /*!40000 ALTER TABLE `materiales` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,7 +261,7 @@ CREATE TABLE `tipo_de_joya` (
 
 LOCK TABLES `tipo_de_joya` WRITE;
 /*!40000 ALTER TABLE `tipo_de_joya` DISABLE KEYS */;
-INSERT INTO `tipo_de_joya` VALUES (10,'Pulsera'),(11,'Arete'),(12,'Pendientes');
+INSERT INTO `tipo_de_joya` VALUES (11,'Arete'),(12,'Pendientes');
 /*!40000 ALTER TABLE `tipo_de_joya` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -273,9 +277,8 @@ CREATE TABLE `venta` (
   `monto_total` float NOT NULL,
   `direcciones_id` int(11) NOT NULL,
   `clientes_id1` int(11) NOT NULL,
-  `sav` varchar(500) DEFAULT NULL,
   PRIMARY KEY (`id_venta`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -284,7 +287,7 @@ CREATE TABLE `venta` (
 
 LOCK TABLES `venta` WRITE;
 /*!40000 ALTER TABLE `venta` DISABLE KEYS */;
-INSERT INTO `venta` VALUES (9,521,12,12,NULL),(10,1290,1,1,NULL);
+INSERT INTO `venta` VALUES (9,521,12,12),(10,1290,1,1),(11,9999,2,2),(12,9999,2,2),(13,9999,2,2),(14,6999,2,2),(15,9999,2,2),(16,6500,2,2),(17,13499,0,17),(18,9999,2,2);
 /*!40000 ALTER TABLE `venta` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -297,4 +300,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-08-12  8:33:35
+-- Dump completed on 2020-08-18  9:23:06
