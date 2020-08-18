@@ -83,8 +83,8 @@
           </button>
 
           <a class="btn btn-dark" href="clientes_formularios.php" role="button">Registrarse</a>
-          
-          <a href="#" class="card-link">¿Olvidaste Tu Contraseña?</a>
+
+          <a href="contrase.php" class="card-link">¿Olvidaste Tu Contraseña?</a>
         </form>
 
       </div>
